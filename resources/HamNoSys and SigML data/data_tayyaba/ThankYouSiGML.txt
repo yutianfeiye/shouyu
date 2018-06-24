@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sigml>
+
+<hns_sign gloss="">
+
+<hamnosys_nonmanual>
+
+
+<hnm_head tag="NF"/>	
+<hnm_shoulder tag="HB"/>	
+<hnm_body tag="TF"/>	
+</hamnosys_nonmanual>
+
+<hamnosys_manual>
+
+
+<hamflathand/>
+<hamthumbacrossmod/>
+<hamextfingeru/>
+<hampalmu/>
+<hamnose/>
+<hambetween/>
+<hamshoulders/>
+<hamnodding/>
+<hamslow/>
+</hamnosys_manual>
+
+</hns_sign>
+
+</sigml>

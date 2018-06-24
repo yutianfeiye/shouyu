@@ -1,0 +1,113 @@
+
+
+<SIMPLE-PRESENT-AFFIRMATIVE> ::= <SUBJ> <VP> <PRPS>| <NP1><NP2><VP> | <ADVP><SUBJ><VP>
+<SIMPLE-PAST-AFFIRMATIVE> ::= <"was"> <SUBJ> <VP> | <"was"><ADVP><","><SUBJ><VP>
+<PRESENT-INDEFINITE-AFFIRMATIVE> ::= <SUBJ> <VP> | <NP> <ADVP><VP>
+<PRESENT-CONTINUOUS-AFFIRMATIVE> ::= <SUBJ> <VP> <"now">
+<PRESENT-PERFECT-AFFIRMATIVE> ::= <SUBJ> <VP> <"full">
+<PRESENT-PERFECT-CONTINUOUS-AFFIRMATIVE> ::= <SUBJ> <VP> <"full">
+<PAST-INDEFINITE-AFFIRMATIVE> ::= <"was"> <SUBJ> <VP> | <"was"><PP><","><SUBJ><VP> | <"was"><NP><","><SUBJ><VP> | <"was"><ADVP><","><SUBJ><VP>
+<PAST-CONTINUOUS-AFFIRMATIVE> ::= <"was"> <SUBJ> <VP> |<"was"><NP><,><SUBJ><VP> 
+<PAST-PERFECT-AFFIRMATIVE> ::= <"was"> <SUBJ> <VP> <"full">
+<PAST-PERFECT-CONTINUOUS-AFFIRMATIVE> ::= <"was"> <SUBJ> <VP> <"full">
+<FUTURE-INDEFINITE-AFFIRMATIVE> ::= <SUBJ> <VP> <"after">
+<FUTURE-CONTINUOUS-AFFIRMATIVE> ::= <SUBJ> <VP> <"after">
+<FUTURE-PERFECT-AFFIRMATIVE> ::= <SUBJ> <VP> <"full"> <"after">
+<FUTURE-PERFECT-CONTINUOUS-AFFIRMATIVE> ::= <SUBJ> <VP> <"full"> <"after">
+
+<SUBJ> ::= <NOUN> | <ADJ> <NOUN> | <PP> <NP> | <NOUN1> <NOUN2> | <NP1> <NP2> | <NP> <UCP> | <NOUN1><CC><NOUN2> | <NP><VP> | <CD><NOUN> | <EX> | <ADJ><NOUN1><NOUN2> | <ADJ><NOUN1><CC><NOUN2> | <NOUN1><NOUN2><NOUN3> | <PRPS><ADJ><NOUN> | <PRPS><NOUN> | <ADJ1><ADJ2><NOUN> | <NP1><CC><NP2> | <ADJP><NOUN1><NOUN2> | <NP><NOUN> | <CD><ADJ><NOUN> | <PRPS><NOUN1><NOUN2> | <ADJP><NOUN>
+
+<OBJ> ::= <NOUN> | <ADJ> <NOUN> | <PP> <NP> | <NOUN1> <NOUN2> | <NP1> <NP2> | <NP> <UCP> | <NOUN1><CC><NOUN2> | <NP><VP> | <CD><NOUN> | <EX> | <ADJ><NOUN1><NOUN2> | <ADJ><NOUN1><CC><NOUN2> | <NOUN1><NOUN2><NOUN3> | <PRPS><ADJ><NOUN> | <PRPS><NOUN> | <ADJ1><ADJ2><NOUN> | <NP1><CC><NP2> | <ADJP><NOUN1><NOUN2> | <NP><NOUN> | <CD><ADJ><NOUN> | <PRPS><NOUN1><NOUN2> | <ADJP><NOUN>
+
+<NP> ::= <NOUN> | <ADJ> <NOUN> | <PP> <NP> | <NOUN1> <NOUN2> | <NP1> <NP2> | <NP> <UCP> | <NOUN1><CC><NOUN2> | <NP><VP> | <CD><NOUN> | <EX> | <VP><NP> | <ADJ><NOUN1><NOUN2> | <ADJ><NOUN1><CC><NOUN2> | <NOUN1><NOUN2><NOUN3> | <PRPS><ADJ><NOUN> | <PRPS><NOUN> | <ADJ1><ADJ2><NOUN> | <NP1><CC><NP2> | <ADJP><NOUN1><NOUN2> | <NP><NOUN> | <CD><ADJ><NOUN> | <PRPS><NOUN1><NOUN2> | <ADJP><NOUN>
+
+<VP> ::= <ADVP> <VERB> | <OBJ> <VERB> | <PP> <VP> | <VERB> | <PP> <VERB> | <ADJP> | <OBJ> <ADVP> <VERB> | <ADJP> <VERB> | <PP><OBJ><VERB> | <VERB><PRT> | <VP1><CC><VP2> | <PP2><PP1><VERB> | <S><VERB> | <OBJ><VERB><PRT> | <NP> | <NP><VERB> | <ADVP><VERB><PRT> | <MD> | <PP><ADJP> | <VP1><,><ADVP><VP2> | <VERB><ADVP1><ADVP2><S> | <PP><ADVP><VERB> | <ADVP><NP><VERB> | <ADVP><VP> | <PP><VERB><S> 
+
+<VP1> ::= <ADVP> <VERB> | <OBJ> <VERB> | <PP> <VP> | <VERB> | <PP> <VERB> | <ADJP> | <OBJ> <ADVP> <VERB> | <ADJP> <VERB> | <PP><OBJ><VERB> | <VERB><PRT> | <VP1><CC><VP2> | <PP2><PP1><VERB> | <S><VERB> | <OBJ><VERB><PRT> | <NP> | <NP><VERB> | <ADVP><VERB><PRT> | <MD> | <PP><ADJP> | <VP1><,><ADVP><VP2> | <PP><ADVP><VERB> | <ADVP><NP><VERB>| <ADVP><VP> | <PP><VERB><S>
+
+<VP2> ::= <ADVP> <VERB> | <OBJ> <VERB> | <PP> <VP> | <VERB> | <PP> <VERB> | <ADJP> | <OBJ> <ADVP> <VERB> | <ADJP> <VERB> | <PP><OBJ><VERB> | <VERB><PRT> | <VP1><CC><VP2> | <PP2><PP1><VERB> | <S><VERB> | <OBJ><VERB><PRT> | <NP> | <NP><VERB> | <ADVP><VERB><PRT> | <MD> | <PP><ADJP> | <VP1><,><ADVP><VP2> | <PP><ADVP><VERB> | <ADVP><NP><VERB>| <ADVP><VP> | <PP><VERB><S>
+
+
+<ADVP> ::= <RB> | <ADV> | <NP> <ADV> | <ADJ> | <ADV><CC><RB> | <ADV1><ADV2>
+<ADJP> ::= <ADJ> | <SBAR> | <FW> | <PP><ADV><ADJ> | <PP><ADV><VERB> | <ADJ1><ADJ2> | <ADJ><S>
+<PP> ::=  <NP> |  <NOUN> |  <ADVP>
+<SBAR> ::= <S>
+<PRT> ::= <RP>
+
+<SIMPLE-PRESENT-NEGATIVE> ::= <SUBJ> <VP> <"not">
+<SIMPLE-PAST-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"not">
+<PRESENT-INDEFINITE-NEGATIVE> ::= <SUBJ> <VP> <"not">
+<PRESENT-CONTINUOUS-NEGATIVE> ::= <SUBJ> <VP> <"now"> <"not">
+<PRESENT-PERFECT-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"not">
+<PRESENT-PERFECT-CONTINUOUS-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"not">
+<PAST-INDEFINITE-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"not">
+<PAST-CONTINUOUS-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"not">
+<PAST-PERFECT-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"not">
+<PAST-PERFECT-CONTINUOUS-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"not">
+<FUTURE-INDEFINITE-NEGATIVE> ::= <SUBJ> <VP> <"after"> <"not">
+<FUTURE-CONTINUOUS-NEGATIVE> ::= <SUBJ> <VP> <"after"> <"not">
+<FUTURE-PERFECT-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"not">
+<FUTURE-PERFECT-CONTINUOUS-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"not">
+
+<SIMPLE-PRESENT-INTERROGATIVE> ::= <NP> <ADJP> <"yes-no">
+<SIMPLE-PAST-INTERROGATIVE> ::= <"was"> <NP> <ADJP> <"yes-no"> | <"was"><NP1><NP2><"yes-no">
+<PRESENT-INDEFINITE-INTERROGATIVE> ::= <SUBJ> <VP> <"yes-no">
+<PRESENT-CONTINUOUS-INTERROGATIVE> ::= <SUBJ> <VP> <"now"> <"yes-no">
+<PRESENT-PERFECT-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"yes-no">
+<PRESENT-PERFECT-CONTINUOUS-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"yes-no">
+<PAST-INDEFINITE-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"yes-no">
+<PAST-CONTINUOUS-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"yes-no">
+<PAST-PERFECT-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"yes-no">
+<PAST-PERFECT-CONTINUOUS-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"yes-no">
+<FUTURE-INDEFINITE-INTERROGATIVE> ::= <SUBJ> <VP> <"after"> <"yes-no">
+<FUTURE-CONTINUOUS-INTERROGATIVE> ::= <SUBJ> <VP> <"after"> <"yes-no">
+<FUTURE-PERFECT-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"yes-no">
+<FUTURE-PERFECT-CONTINUOUS-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"yes-no">
+
+
+<SIMPLE-PRESENT-NEGATIVE-INTERROGATIVE> ::= <NP> <ADJP> <"not"> <"yes-no">
+<SIMPLE-PAST-NEGATIVE-INTERROGATIVE> ::= <"was"> <NP> <ADJP> <"not"> <"yes-no">
+<PRESENT-INDEFINITE-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"not"> <"yes-no">
+<PRESENT-CONTINUOUS-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"now"> <"not"> <"yes-no">
+<PRESENT-PERFECT-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"not"> <"yes-no">
+<PRESENT-PERFECT-CONTINUOUS-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"not"> <"yes-no">
+<PAST-INDEFINITE-NEGATIVE-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"not"> <"yes-no">
+<PAST-CONTINUOUS-NEGATIVE-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"not"> <"yes-no"> | <"was"><NP><SBAR><"not"><"yes-no">
+<PAST-PERFECT-NEGATIVE-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"not"> <"yes-no">
+<PAST-PERFECT-CONTINUOUS-NEGATIVE-INTERROGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"not"> <"yes-no">
+<FUTURE-INDEFINITE-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"after"> <"not"> <"yes-no">
+<FUTURE-CONTINUOUS-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"after"> <"not"> <"yes-no">
+<FUTURE-PERFECT-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"not"> <"yes-no">
+<FUTURE-PERFECT-CONTINUOUS-NEGATIVE-INTERROGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"not"> <"yes-no">
+
+<SIMPLE-PRESENT-WH> ::= <SUBJ> <VP> | <NP1><NP2><VP> | <ADVP><SUBJ><VP> | <NP><ADJP>
+<SIMPLE-PAST-WH> ::= <"was"> <SUBJ> <VP> | <"was"><ADVP><","><SUBJ><VP> | <"was"> <NP><ADJP>
+<PRESENT-INDEFINITE-WH> ::= <SUBJ> <VP> | <NP> <ADVP><VP>
+<PRESENT-CONTINUOUS-WH> ::= <SUBJ> <VP> <"now">
+<PRESENT-PERFECT-WH> ::= <SUBJ> <VP> <"full">
+<PRESENT-PERFECT-CONTINUOUS-WH> ::= <SUBJ> <VP> <"full">
+<PAST-INDEFINITE-WH> ::= <"was"> <SUBJ> <VP> | <"was"><PP><","><SUBJ><VP> | <"was"><NP><","><SUBJ><VP> | <"was"><ADVP><","><SUBJ><VP>
+<PAST-CONTINUOUS-WH> ::= <"was"> <SUBJ> <VP> |<"was"><NP><,><SUBJ><VP> 
+<PAST-PERFECT-WH> ::= <"was"> <SUBJ> <VP> <"full">
+<PAST-PERFECT-CONTINUOUS-WH> ::= <"was"> <SUBJ> <VP> <"full">
+<FUTURE-INDEFINITE-WH> ::= <SUBJ> <VP> <"after">
+<FUTURE-CONTINUOUS-WH> ::= <SUBJ> <VP> <"after">
+<FUTURE-PERFECT-WH> ::= <SUBJ> <VP> <"full"> <"after">
+<FUTURE-PERFECT-CONTINUOUS-WH> ::= <SUBJ> <VP> <"full"> <"after">
+
+<SIMPLE-PRESENT-WH-NEGATIVE> ::= <SUBJ> <VP> <"not"> | <NP><ADJP>
+<SIMPLE-PAST-WH-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"not"> | <"was"> <NP><ADJP> <"not">
+<PRESENT-INDEFINITE-WH-NEGATIVE> ::= <SUBJ> <VP> <"not">
+<PRESENT-CONTINUOUS-WH-NEGATIVE> ::= <SUBJ> <VP> <"now"> <"not">
+<PRESENT-PERFECT-WH-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"not">
+<PRESENT-PERFECT-CONTINUOUS-WH-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"not">
+<PAST-INDEFINITE-WH-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"not">
+<PAST-CONTINUOUS-WH-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"not">
+<PAST-PERFECT-WH-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"not">
+<PAST-PERFECT-CONTINUOUS-WH-NEGATIVE> ::= <"was"> <SUBJ> <VP> <"full"> <"not">
+<FUTURE-INDEFINITE-WH-NEGATIVE> ::= <SUBJ> <VP> <"after"> <"not">
+<FUTURE-CONTINUOUS-WH-NEGATIVE> ::= <SUBJ> <VP> <"after"> <"not">
+<FUTURE-PERFECT-WH-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"not">
+<FUTURE-PERFECT-CONTINUOUS-WH-NEGATIVE> ::= <SUBJ> <VP> <"full"> <"after"> <"not">
+
+<WH-QUESTION> ::= <SIMPLE-PRESENT-WH> <WH> | <SIMPLE-PAST-WH> <WH> | <PRESENT-INDEFINITE-WH><WH> | <PRESENT-CONTINUOUS-WH> <WH>| <PRESENT-PERFECT-CONTINUOUS-WH> <WH> | <PAST-INDEFINITE-WH><WH> | <PAST-CONTINUOUS-WH><WH>| <PAST-PERFECT-WH> <WH> | <PAST-PERFECT-CONTINUOUS-WH><WH> | <FUTURE-INDEFINITE-WH><WH> | <FUTURE-CONTINUOUS-WH> <WH>| <FUTURE-PERFECT-WH><WH> | <FUTURE-PERFECT-CONTINUOUS-WH><WH> | <SIMPLE-PRESENT-WH-NEGATIVE> <WH> | <SIMPLE-PAST-WH-NEGATIVE> <WH> | <PRESENT-INDEFINITE-WH-NEGATIVE><WH> | <PRESENT-CONTINUOUS-WH-NEGATIVE> <WH>| <PRESENT-PERFECT-CONTINUOUS-WH-NEGATIVE> <WH> | <PAST-INDEFINITE-WH-NEGATIVE><WH> | <PAST-CONTINUOUS-WH-NEGATIVE><WH>| <PAST-PERFECT-WH-NEGATIVE> <WH> | <PAST-PERFECT-CONTINUOUS-WH-NEGATIVE><WH> | <FUTURE-INDEFINITE-WH-NEGATIVE><WH> | <FUTURE-CONTINUOUS-WH-NEGATIVE> <WH>| <FUTURE-PERFECT-WH><WH> | <FUTURE-PERFECT-CONTINUOUS-WH><WH>

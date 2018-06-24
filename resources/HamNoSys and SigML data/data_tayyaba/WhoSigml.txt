@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sigml>
+
+<hns_sign gloss="">
+
+<hamnosys_nonmanual>
+
+
+<hnm_eyebrows tag="RB"/>
+</hamnosys_nonmanual>
+
+<hamnosys_manual>
+
+
+<hamfinger23spread/>
+<hamextfingerul/>
+<hampalmdl/>
+<hamear/>
+<hambetween/>
+<hamnose/>
+<hamseqbegin/>
+<hamclose/>
+<hammiddlefinger/>
+<hamseqend/>
+<hammovel/>
+<hamarcu/>
+<hammover/>
+<hamarcd/>
+<hamslow/>
+<hamslow/>
+</hamnosys_manual>
+
+</hns_sign>
+
+</sigml>

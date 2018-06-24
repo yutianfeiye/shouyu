@@ -1,0 +1,138 @@
+24-Jun-2018 09:30:51.301 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+24-Jun-2018 09:30:51.307 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+24-Jun-2018 09:30:51.309 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+24-Jun-2018 09:30:51.309 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+24-Jun-2018 09:30:51.309 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+24-Jun-2018 09:30:51.309 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Jun-2018 09:30:51.310 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+24-Jun-2018 09:30:51.310 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+24-Jun-2018 09:30:51.310 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+24-Jun-2018 09:30:51.310 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu\tomcat
+24-Jun-2018 09:30:51.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu\tomcat
+24-Jun-2018 09:30:51.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\tomcat\conf\logging.properties
+24-Jun-2018 09:30:51.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Jun-2018 09:30:51.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Jun-2018 09:30:51.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Jun-2018 09:30:51.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+24-Jun-2018 09:30:51.312 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu\tomcat
+24-Jun-2018 09:30:51.312 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu\tomcat
+24-Jun-2018 09:30:51.313 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\tomcat\temp
+24-Jun-2018 09:30:51.313 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+24-Jun-2018 09:30:51.314 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+24-Jun-2018 09:30:51.314 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-Jun-2018 09:30:52.033 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+24-Jun-2018 09:30:52.352 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Jun-2018 09:30:52.836 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Jun-2018 09:30:52.847 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+24-Jun-2018 09:30:52.849 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Jun-2018 09:30:52.851 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2297 ms
+24-Jun-2018 09:30:52.881 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+24-Jun-2018 09:30:52.882 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+24-Jun-2018 09:30:52.894 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 09:30:53.205 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [310] ms
+24-Jun-2018 09:30:53.207 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+24-Jun-2018 09:30:53.216 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+24-Jun-2018 09:30:53.219 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 367 ms
+24-Jun-2018 13:38:32.887 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 13:38:42.934 信息 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 13:38:42.982 信息 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [48] ms
+24-Jun-2018 13:39:33.491 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 13:39:43.508 信息 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 13:39:43.539 信息 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [31] ms
+24-Jun-2018 13:43:34.085 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 13:43:44.101 信息 [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 13:43:44.138 信息 [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [37] ms
+24-Jun-2018 13:56:54.830 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 13:57:14.847 信息 [localhost-startStop-5] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 13:57:14.868 信息 [localhost-startStop-5] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [20] ms
+24-Jun-2018 14:04:15.476 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 14:04:35.489 信息 [localhost-startStop-6] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 14:04:35.523 信息 [localhost-startStop-6] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [34] ms
+24-Jun-2018 14:10:16.115 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 14:10:36.132 信息 [localhost-startStop-7] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 14:10:36.181 信息 [localhost-startStop-7] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [49] ms
+24-Jun-2018 14:12:06.714 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 14:12:26.728 信息 [localhost-startStop-8] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 14:12:26.754 信息 [localhost-startStop-8] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [25] ms
+24-Jun-2018 14:34:47.533 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 14:40:17.577 信息 [localhost-startStop-9] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 14:40:17.612 信息 [localhost-startStop-9] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [35] ms
+24-Jun-2018 14:42:28.131 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 14:42:48.145 信息 [localhost-startStop-10] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 14:42:48.167 信息 [localhost-startStop-10] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [23] ms
+24-Jun-2018 14:58:58.830 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 14:59:18.841 信息 [localhost-startStop-11] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 14:59:18.863 信息 [localhost-startStop-11] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [23] ms
+24-Jun-2018 15:01:19.388 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 15:01:39.400 信息 [localhost-startStop-12] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 15:01:39.423 信息 [localhost-startStop-12] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [23] ms
+24-Jun-2018 15:10:30.005 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 15:10:50.019 信息 [localhost-startStop-13] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 15:10:50.041 信息 [localhost-startStop-13] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [22] ms
+24-Jun-2018 15:19:50.666 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 15:20:00.678 信息 [localhost-startStop-14] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 15:20:00.697 信息 [localhost-startStop-14] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [19] ms
+24-Jun-2018 15:26:21.272 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 17:24:51.872 信息 [localhost-startStop-15] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 17:24:51.902 信息 [localhost-startStop-15] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [30] ms
+24-Jun-2018 19:41:04.032 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 19:41:24.049 信息 [localhost-startStop-16] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 19:41:24.119 信息 [localhost-startStop-16] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [69] ms
+24-Jun-2018 19:45:14.660 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 19:45:34.672 信息 [localhost-startStop-17] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 19:45:34.690 信息 [localhost-startStop-17] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [18] ms
+24-Jun-2018 19:46:45.205 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 19:47:05.217 信息 [localhost-startStop-18] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 19:47:05.254 信息 [localhost-startStop-18] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [37] ms
+24-Jun-2018 19:47:55.765 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 19:48:15.782 信息 [localhost-startStop-19] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 19:48:15.803 信息 [localhost-startStop-19] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [21] ms
+24-Jun-2018 19:51:16.338 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 19:51:36.352 信息 [localhost-startStop-20] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 19:51:36.392 信息 [localhost-startStop-20] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [40] ms
+24-Jun-2018 19:55:56.941 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 19:56:06.955 信息 [localhost-startStop-21] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 19:56:06.983 信息 [localhost-startStop-21] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [28] ms
+24-Jun-2018 20:20:07.803 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 20:20:27.821 信息 [localhost-startStop-22] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\tomcat\webapps\ROOT]
+24-Jun-2018 20:20:27.868 信息 [localhost-startStop-22] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\tomcat\webapps\ROOT] has finished in [47] ms
+24-Jun-2018 20:22:58.391 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 20:48:36.211 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+24-Jun-2018 20:48:36.216 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+24-Jun-2018 20:48:36.217 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+24-Jun-2018 20:48:36.217 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+24-Jun-2018 20:48:36.218 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+24-Jun-2018 20:48:36.218 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Jun-2018 20:48:36.218 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+24-Jun-2018 20:48:36.219 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+24-Jun-2018 20:48:36.219 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+24-Jun-2018 20:48:36.219 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu
+24-Jun-2018 20:48:36.225 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu
+24-Jun-2018 20:48:36.226 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\conf\logging.properties
+24-Jun-2018 20:48:36.236 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Jun-2018 20:48:36.236 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Jun-2018 20:48:36.237 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Jun-2018 20:48:36.237 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+24-Jun-2018 20:48:36.238 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu
+24-Jun-2018 20:48:36.242 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu
+24-Jun-2018 20:48:36.246 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\temp
+24-Jun-2018 20:48:36.254 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+24-Jun-2018 20:48:36.258 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+24-Jun-2018 20:48:36.268 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-Jun-2018 20:48:37.263 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+24-Jun-2018 20:48:37.428 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Jun-2018 20:48:37.860 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Jun-2018 20:48:37.867 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+24-Jun-2018 20:48:37.870 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Jun-2018 20:48:37.871 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2114 ms
+24-Jun-2018 20:48:37.906 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+24-Jun-2018 20:48:37.906 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+24-Jun-2018 20:48:37.924 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+24-Jun-2018 20:48:43.679 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Jun-2018 20:48:43.737 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [5,812] ms
+24-Jun-2018 20:48:43.743 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+24-Jun-2018 20:48:43.756 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+24-Jun-2018 20:48:43.762 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 5887 ms
+24-Jun-2018 20:52:04.294 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Jun-2018 20:52:14.319 信息 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+24-Jun-2018 20:52:18.879 信息 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [4,560] ms

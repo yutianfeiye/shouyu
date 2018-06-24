@@ -1,0 +1,34 @@
+H_nod_UD	<hnm_head tag="NO"/>	Noding U and D
+H_shk_LR		<hnm_head tag="SH"/>	Shaking L and R
+H_tur_R		<hnm_head tag="SR"/>	Turned R
+H_tur_L		<hnm_head tag="SL"/>	Turned L
+H_til_R		<hnm_head tag="TR"/>	Tilted R
+H_til_L		<hnm_head tag="TL"/>	Tilted L
+H_til_F		<hnm_head tag="NF"/>	Tilted Fwd	
+H_til_B		<hnm_head tag="NB"/>	Tilted Back
+H_nod_U		<hnm_head tag="NU"/>	Noding Up
+H_nod_D		<hnm_head tag="ND"/>	Noding Down
+H_pus_F		<hnm_head tag="PF"/>	Pushed Fwd
+H_pus_B		<hnm_head tag="PB"/>	Pushed backward
+H_lin_eye		<hnm_head tag="LI"/>	Head linked to Eyes
+				
+S_rai_L		<hnm_shoulder tag="UL"/>	Left Shoulder raised
+S_rai_R		<hnm_shoulder tag="UR"/>	Right Shoulder raised
+S_rai_bo		<hnm_shoulder tag="UB"/>	Both Shoulders raised
+S_hun_LF		<hnm_shoulder tag="HL"/>	Left Shoulder hunched Fwd
+S_hun_RF	<hnm_shoulder tag="HR"/>	Right Shoulder hunched Fwd
+S_hun_boF	<hnm_shoulder tag="HB"/>	Both shoulders hunched Fwd
+S_shr_LUD	<hnm_shoulder tag="SL"/>	Left shoulder shrugging U D
+S_shr_RUD	<hnm_shoulder tag="SR"/>	Right Shoulder shrugging U D
+S_shr_boUD	<hnm_shoulder tag="SB"/>	Both Shoulder shrugging U D
+
+B_rot_L		<hnm_body tag="RL"/>	Rotate L
+B_rot_R		<hnm_body tag="RR"/>	Rotate R
+B_til_L		<hnm_body tag="TL"/>	Tilted L
+B_til_R		<hnm_body tag="TR"/>	Tilted R
+B_til_F		<hnm_body tag="TF"/>	Tilted fwd
+B_til_B		<hnm_body tag="TB"/>	Tilted bwd
+B_sig		<hnm_body tag="SI"/>	Sigh
+B_hea		<hnm_body tag="HE"/>	Heave
+B_str		<hnm_body tag="ST"/>	Straight
+B_rou		<hnm_body tag="RD"/>	Round

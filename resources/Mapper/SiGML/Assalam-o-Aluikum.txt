@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sigml>
+
+	<hns_sign gloss="Loudspeaker">
+
+		<hamnosys_nonmanual>
+			<hnm_shoulder tag="UB"/>	
+		</hamnosys_nonmanual>
+
+		<hamnosys_manual>
+			<hamceeall/>
+			<hamthumbopenmod/>
+			<hamfingerstraightmod/>
+			<hamextfingeru/>
+			<hampalml/>
+			<hamhead/>
+			<hamlrbeside/>
+			<hambetween/>
+			<hamear/>
+			<hamlrbeside/>
+			<hamclose/>
+			<hamreplace/>
+			<hampinchall/>
+			<hamfingerstraightmod/>
+			<hamrepeatfromstart/>
+		</hamnosys_manual>
+
+	</hns_sign>
+
+</sigml>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/AbsoluteLayout.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/antlr-3.5.2-complete.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/avatar-basic.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/gluegen-rt-natives-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/gluegen-rt-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/gluegen-rt-natives-windows-i586.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/hns-convert.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jaglib-native-macosx-i386.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jaglib-native-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jaglib-native-windows-x86.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jaglib-native-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jogl-all.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jogl-all-natives-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jogl-all-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/jogl-all-natives-windows-i586.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/log4j-api-2.3.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/log4j-core-2.3.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/plugin.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/sigmlinlib.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/siwiki.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/slf4j-api-1.7.20.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/slf4j-simple-1.7.20.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/stanford-parser.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/use-jarp.jar"/>
+	<classpathentry kind="output" path="dist"/>
+</classpath>

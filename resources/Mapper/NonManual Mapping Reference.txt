@@ -1,0 +1,36 @@
+H_nod_UD
+H_shk_LR
+H_tur_R
+H_tur_L
+H_til_R
+H_til_L
+H_til_F
+H_til_B
+H_nod_U
+H_nod_D
+H_pus_F
+H_pus_B
+H_lin_eye
+0000000000000 = 13
+S_rai_L
+S_rai_R
+S_rai_bo
+S_hun_LF
+S_hun_RF
+S_hun_boF
+S_shr_LUD
+S_shr_RUD
+S_shr_boUD
+000000000 = 9
+B_rot_L
+B_rot_R
+B_til_L
+B_til_R
+B_til_F
+B_til_B
+B_sig
+B_hea
+B_str
+B_rou
+0000000000 = 10
+0000000000000,000000000,0000000000
