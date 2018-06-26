@@ -1980,3 +1980,4 @@
 0:0:0:0:0:0:0:1 - - [26/Jun/2018:14:57:06 +0800] "GET /assets/cwa/shaders/qskin.vert HTTP/1.1" 200 14760
 0:0:0:0:0:0:0:1 - - [26/Jun/2018:14:57:06 +0800] "GET /assets/cwa/shaders/qskin.frag HTTP/1.1" 200 1022
 0:0:0:0:0:0:0:1 - - [26/Jun/2018:14:59:17 +0800] "POST /pub/gaokao/yuwen.jcp HTTP/1.1" 404 1102
+0:0:0:0:0:0:0:1 - - [26/Jun/2018:15:18:17 +0800] "POST /pub/gaokao/yuwen.jcp HTTP/1.1" 404 1102

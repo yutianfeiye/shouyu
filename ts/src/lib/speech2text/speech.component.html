@@ -1,0 +1,15 @@
+<div class="chatInputWrapper"> 
+    <img *ngIf="this.supportVoice" 
+    [src]="this.speaking ? micAnimate : mic" 
+    class="micImg"
+    (click)="this.say()" />
+        <input
+            (change)="changeValue()"
+            [(ngModel)]="inputValue" 
+            class="chatMessageInput"
+            placeholder="Type your message" 
+            fxFlex="100"  
+        />
+
+        <audio controls autoplay style="padding:20px"></audio>
+</div>

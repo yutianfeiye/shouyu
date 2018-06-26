@@ -1,0 +1,1023 @@
+<div fxFlexFill fxLayout="row" fxLayoutGap='10px'>
+  <mat-card fxFlex="68" fxFlexFill fxLayout='column'>
+    <mat-card-content fxFlexFill>
+      <form [formGroup]="form"  novalidate>
+        <div fxLayout="row" class='rows'>
+          <div fxFlex="50" fxLayout="row">
+            <mat-form-field fxFlexFill>
+              <input matInput placeholder="单词" formControlName="word">
+            </mat-form-field>
+          </div>
+          <div fxFlex="50" fxLayout="row">
+            <mat-form-field fxFlexFill>
+              <input matInput placeholder="拼音" formControlName="pinyin">
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start end" style='height:150px' class='rows'>
+          <div fxFlex="50" fxLayout="row">
+            <mat-form-field fxFlexFill>
+              <textarea matInput placeholder="描述" formControlName="description" matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
+            </mat-form-field>
+          </div>
+          <div fxFlex="50" fxLayout="row">
+            <!-- <fancy-image-uploader [options]="options" (onUpload)="onUpload($event)"></fancy-image-uploader> -->
+          </div>
+        </div>
+        <div fxLayout="row" class='rows'>
+          <div fxFlex="100" fxLayout="row">
+            <mat-form-field fxFlexFill>
+              <input #hansField  matInput placeholder="手势" class="ham" name="hans" formControlName="hans">
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+      <mat-tab-group>
+        <mat-tab label="手型">
+          <div id="keyboard_hsh">
+            <table>
+              <tr>
+                <td>
+                  <button title="hamfist" class="ham" value=""  (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamflathand" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfinger2" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfinger23" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfinger23spread" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfinger2345" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinch12" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinchall" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinchopen" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamcee12" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamceeall" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamceeopen" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamthumboutmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamthumbacrossmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamthumbopenmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td colspan="4">&nbsp;</td>
+                <td>
+                  <button title="hamdoublebent" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamfingerstraightmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamfingerbendmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamfingerhookmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamdoublehooked" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamthumb" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamindexfinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hammiddlefinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamringfinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinky" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hambetween" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingertip" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingernail" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerpad" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingermidjoint" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerbase" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerside" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="方向">
+          <div id="keyboard_ori">
+            <table>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamextfingeru" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hamextfingero" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamextfingerul" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamextfingerur" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamextfingerol" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamextfingeror" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamextfingerl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamextfingerr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamextfingerl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamextfingerr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamextfingerdl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamextfingerdr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamextfingeril" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamextfingerir" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamextfingerd" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hamextfingeri" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5"></td>
+                <td>
+                  <button title="hambetween" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamorirelative" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamextfingeru" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hampalmu" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamextfingerui" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamextfingeruo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hampalmul" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hampalmur" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamextfingeri" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamextfingero" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hampalml" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hampalmr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamextfingerdi" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamextfingerdo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hampalmdl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hampalmdr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamextfingerd" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hampalmd" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="位置">
+          <div id="keyboard_loc">
+            <table>
+              <tr>
+                <td>
+                  <button title="hamheadtop" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamhead" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamforehead" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamnose" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamnostrils" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamlips" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamtongue" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamteeth" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamchin" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamunderchin" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamneck" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamshouldertop" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamshoulders" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamchest" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamstomach" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hambelowstomach" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hameyebrows" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hameyes" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamear" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamearlobe" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamcheek" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamupperarm" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamelbowinside" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamlowerarm" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamwristback" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamthumbball" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampalm" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamhandback" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamthumbside" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinkyside" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamthumb" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamindexfinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hammiddlefinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamringfinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinky" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hambetween" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingertip" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingernail" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerpad" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingermidjoint" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerbase" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamclose" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamtouch" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="haminterlock" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamcross" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hambrushing" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hambehind" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamarmextended" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamlrbeside" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamlrat" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamdoublebent" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamdoublehooked" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamneutralspace" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="动作1">
+          <div id="keyboard_mov1">
+            <table>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hammoveu" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hammoveo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hammoveul" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hammoveur" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hammoveol" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hammoveor" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hammovel" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hammover" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hammovel" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hammover" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hammovedl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hammovedr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hammoveil" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hammoveir" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hammoved" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hammovei" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5"></td>
+                <td>
+                  <button title="hambetween" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamspace" class="ham" value=" " (click)="setGesture($event)"> </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hammoveu" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamfast" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamslow" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamtense" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamrest" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamhalt" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hammoveui" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hammoveuo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamrepeatfromstart" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamrepeatfromstartseveral" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamrepeatcontinue" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamrepeatcontinueseveral" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamrepeatreverse" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hammovei" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hammoveo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamsmallmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamlargemod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamnomotion" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamincreasing" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamdecreasing" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hammovedi" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hammovedo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamarcl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamarcu" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamarcd" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamarcr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamwavy" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hammoved" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamellipsev" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamellipseur" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamellipseh" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamellipseul" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamzigzag" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="动作2">
+          <div id="keyboard_mov2">
+            <table>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamcircleu" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hamcircleo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamcircleul" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamcircleur" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamcircleol" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamcircleor" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamcirclel" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamcircler" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamcirclel" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamcircler" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamcircledl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamcircledr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamcircleil" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamcircleir" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamcircled" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hamcirclei" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamstircw" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamnodding" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamtwisting" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamreplace" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+
+                <td>
+                  <button title="hamstirccw" class="ham" value=""  (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamswinging" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerplay" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hambetween" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamcircleu" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hamclocku" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamcircleui" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamcircleuo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamclockul" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamclockur" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamcirclei" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                  <button title="hamcircleo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamclockl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamclockfull" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamclockr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button title="hamcircledi" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamcircledo" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="4"></td>
+                <td>
+                  <button title="hamclockdl" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td></td>
+                <td>
+                  <button title="hamclockdr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <button title="hamcircled" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td colspan="6"></td>
+                <td>
+                  <button title="hamclockd" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="双手">
+          <div id="keyboard_2hd">
+            <table>
+              <tr>
+                <td>
+                  <button title="hamsymmpar" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamsymmlr" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfingerstraightmod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamlargemod" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamsymmlr,hamfingerstraightmod,hamlargemod" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamparbegin" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamplus" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamparend" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamalternatingmotion" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamnonipsi" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamnondominant" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hametc" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+              </tr>
+              <tr>
+
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamseqbegin" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamseqend" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamparbegin" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamparend" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfusionbegin" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamfusionend" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamaltbegin" class="ham" value="{" (click)="setGesture($event)">{{ '{' }}</button>
+                </td>
+                <td>
+                  <button title="hamaltend" class="ham" value="}" (click)="setGesture($event)"> {{ '}' }}</button>
+                </td>
+                <td>
+                  <button title="hammetaalt" class="ham" value="|" (click)="setGesture($event)"> {{ '|' }}</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamcoreftag" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamcorefref" class="ham" value="" (click)="setGesture($event)">&nbsp;</button>
+                </td>
+                <td>
+                  <button title="hamthumb" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamindexfinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hammiddlefinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hamringfinger" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+                <td>
+                  <button title="hampinky" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button title="hamcomma" class="ham" value="," (click)="setGesture($event)">{{ ',' }}</button>
+                </td>
+                <td>
+                  <button title="hamfullstop" class="ham" value="." (click)="setGesture($event)">{{ '.' }}</button>
+                </td>
+                <td>
+                  <button title="hamexclaim" class="ham" value="!" (click)="setGesture($event)">{{ '!' }}</button>
+                </td>
+                <td>
+                  <button title="hamquery" class="ham" value="?" (click)="setGesture($event)">{{ '?' }}</button>
+                </td>
+                <td>
+                  <button title="hammime" class="ham" value="" (click)="setGesture($event)"></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <div class="fab-button">
+        <button mat-fab (click)="onSubmit()">
+          <mat-icon color="accent" class="fab-item-icon">check</mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card fxFlex="32" fxFlexFill fxLayout='column'>
+    <!-- <mat-card-title>
+        <h3 class="mat-title">
+          手语字典管理
+        </h3>
+        <mat-divider></mat-divider>
+    </mat-card-title> -->
+  <mat-card-content fxFlexFill >
+    <div class="CWASAPanel av0" align="center" fxFlexFill></div>
+    <div class="fab-button">
+      <button mat-fab>
+        <mat-icon color="accent" class="fab-item-icon">play_arrow</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>
