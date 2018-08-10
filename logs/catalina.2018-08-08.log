@@ -1,0 +1,689 @@
+08-Aug-2018 08:25:42.189 警告 [http-nio-8080-exec-6] com.susing.sql.GenericConnection.getResult com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 41,677,319 milliseconds ago.  The last packet sent successfully to the server was 41,677,320 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+select id,lang,nl_grammar,sl_grammer from grammar_base
+08-Aug-2018 08:26:19.680 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+08-Aug-2018 08:26:19.686 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+08-Aug-2018 08:26:19.687 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+08-Aug-2018 08:26:19.687 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Aug-2018 08:26:19.687 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Aug-2018 08:26:19.687 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Aug-2018 08:26:19.688 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+08-Aug-2018 08:26:19.688 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+08-Aug-2018 08:26:19.688 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Aug-2018 08:26:19.689 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu
+08-Aug-2018 08:26:19.689 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu
+08-Aug-2018 08:26:19.690 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\conf\logging.properties
+08-Aug-2018 08:26:19.690 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Aug-2018 08:26:19.690 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Aug-2018 08:26:19.691 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Aug-2018 08:26:19.691 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+08-Aug-2018 08:26:19.691 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu
+08-Aug-2018 08:26:19.693 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu
+08-Aug-2018 08:26:19.694 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\temp
+08-Aug-2018 08:26:19.695 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+08-Aug-2018 08:26:19.695 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08-Aug-2018 08:26:19.696 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08-Aug-2018 08:26:20.776 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+08-Aug-2018 08:26:21.035 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 08:26:21.753 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 08:26:21.766 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 08:26:21.771 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 08:26:21.772 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2856 ms
+08-Aug-2018 08:26:21.825 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Aug-2018 08:26:21.826 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+08-Aug-2018 08:26:21.840 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+08-Aug-2018 08:26:39.341 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Aug-2018 08:26:39.381 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer starting..
+08-Aug-2018 08:26:39.479 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.sql.GenericDataSource$Cache@c3c77b3]已经启动,下一次将在 2018-08-08 08:27:39.479 执行
+08-Aug-2018 08:26:39.480 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=plat;type=MYSQL(MySQL)
+08-Aug-2018 08:26:39.483 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=shouyu;type=MYSQL(MySQL)
+08-Aug-2018 08:26:39.921 信息 [localhost-startStop-1] com.susing.core.KingleService.__start 正在启动服务:会话服务器
+08-Aug-2018 08:26:39.921 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.core.SessionContext@68db7547]已经启动,下一次将在 2018-08-08 08:29:39.921 执行
+08-Aug-2018 08:26:39.925 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START session-domain : 
+08-Aug-2018 08:26:39.930 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer init wasted in 550 millis
+08-Aug-2018 08:26:41.366 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [19,525] ms
+08-Aug-2018 08:26:41.371 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 08:26:41.388 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 08:26:41.394 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 19620 ms
+08-Aug-2018 08:26:58.986 警告 [http-nio-8080-exec-1] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)   参数:[null,null,null]
+ java.sql.BatchUpdateException: Column 'lang' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.GrammarService.postSynonym(GrammarService.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'lang' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 08:34:50.097 警告 [http-nio-8080-exec-6] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)   参数:[null,null,null]
+ java.sql.BatchUpdateException: Column 'lang' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.GrammarService.postSynonym(GrammarService.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'lang' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 08:35:48.896 警告 [http-nio-8080-exec-9] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)   参数:[null,null,null]
+ java.sql.BatchUpdateException: Column 'lang' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.GrammarService.postSynonym(GrammarService.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'lang' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 08:37:45.678 警告 [http-nio-8080-exec-3] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)   参数:[null,null,null]
+ java.sql.BatchUpdateException: Column 'lang' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.GrammarService.postSynonym(GrammarService.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'lang' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 08:38:54.395 警告 [http-nio-8080-exec-5] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)   参数:[null,null,null]
+ java.sql.BatchUpdateException: Column 'lang' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.GrammarService.postSynonym(GrammarService.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'lang' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 08:40:41.873 警告 [http-nio-8080-exec-9] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)   参数:[null,null,null]
+ java.sql.BatchUpdateException: Column 'lang' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.GrammarService.postSynonym(GrammarService.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'lang' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 12:11:15.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+08-Aug-2018 12:11:15.620 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+08-Aug-2018 12:11:15.621 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+08-Aug-2018 12:11:15.621 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Aug-2018 12:11:15.621 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Aug-2018 12:11:15.621 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Aug-2018 12:11:15.622 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+08-Aug-2018 12:11:15.622 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+08-Aug-2018 12:11:15.622 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Aug-2018 12:11:15.622 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu
+08-Aug-2018 12:11:15.622 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu
+08-Aug-2018 12:11:15.623 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\conf\logging.properties
+08-Aug-2018 12:11:15.623 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Aug-2018 12:11:15.623 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Aug-2018 12:11:15.623 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Aug-2018 12:11:15.624 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+08-Aug-2018 12:11:15.624 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu
+08-Aug-2018 12:11:15.626 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu
+08-Aug-2018 12:11:15.626 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\temp
+08-Aug-2018 12:11:15.628 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+08-Aug-2018 12:11:15.629 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08-Aug-2018 12:11:15.629 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08-Aug-2018 12:11:16.806 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+08-Aug-2018 12:11:17.021 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 12:11:17.705 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 12:11:17.716 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 12:11:17.721 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 12:11:17.721 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2565 ms
+08-Aug-2018 12:11:17.767 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Aug-2018 12:11:17.767 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+08-Aug-2018 12:11:17.781 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+08-Aug-2018 12:11:34.874 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Aug-2018 12:11:34.915 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer starting..
+08-Aug-2018 12:11:34.976 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.sql.GenericDataSource$Cache@c3c77b3]已经启动,下一次将在 2018-08-08 12:12:34.976 执行
+08-Aug-2018 12:11:34.977 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=plat;type=MYSQL(MySQL)
+08-Aug-2018 12:11:34.981 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=shouyu;type=MYSQL(MySQL)
+08-Aug-2018 12:11:35.442 信息 [localhost-startStop-1] com.susing.core.KingleService.__start 正在启动服务:会话服务器
+08-Aug-2018 12:11:35.442 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.core.SessionContext@68db7547]已经启动,下一次将在 2018-08-08 12:14:35.442 执行
+08-Aug-2018 12:11:35.445 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START session-domain : 
+08-Aug-2018 12:11:35.445 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer init wasted in 531 millis
+08-Aug-2018 12:11:36.774 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [18,992] ms
+08-Aug-2018 12:11:36.780 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 12:11:36.794 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 12:11:36.802 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 19079 ms
+08-Aug-2018 13:05:31.663 警告 [http-nio-8080-exec-8] com.susing.sql.GenericConnection.executeUpdate SQL执行错误INSERT INTO user_base (user_name,password) values (?,?)   参数:[null,kj1970]
+ java.sql.BatchUpdateException: Column 'user_name' cannot be null
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2054)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1467)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:294)
+	at com.susing.sql.GenericConnection.executeUpdate(GenericConnection.java:578)
+	at com.susing.sql.GenericConnection.exec(GenericConnection.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.susing.sql.GenericConnection.invoke(GenericConnection.java:124)
+	at com.sun.proxy.$Proxy4.exec(Unknown Source)
+	at com.kinglib.Connection.exec(Connection.java:430)
+	at com.kinglib.Connection.exec(Connection.java:419)
+	at com.kinglibx.service.UserService.postUser(UserService.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:214)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:748)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:945)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:876)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:931)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:833)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:807)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'user_name' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4120)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4052)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2503)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2664)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2794)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2006)
+	... 52 more
+
+08-Aug-2018 14:51:40.344 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+08-Aug-2018 14:51:40.349 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+08-Aug-2018 14:51:40.350 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+08-Aug-2018 14:51:40.350 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Aug-2018 14:51:40.351 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Aug-2018 14:51:40.351 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Aug-2018 14:51:40.351 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+08-Aug-2018 14:51:40.352 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+08-Aug-2018 14:51:40.352 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Aug-2018 14:51:40.352 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu
+08-Aug-2018 14:51:40.352 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu
+08-Aug-2018 14:51:40.353 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\conf\logging.properties
+08-Aug-2018 14:51:40.353 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Aug-2018 14:51:40.353 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Aug-2018 14:51:40.354 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Aug-2018 14:51:40.354 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+08-Aug-2018 14:51:40.354 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu
+08-Aug-2018 14:51:40.356 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu
+08-Aug-2018 14:51:40.357 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\temp
+08-Aug-2018 14:51:40.358 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+08-Aug-2018 14:51:40.359 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08-Aug-2018 14:51:40.371 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08-Aug-2018 14:51:41.492 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+08-Aug-2018 14:51:41.728 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 14:51:42.383 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 14:51:42.393 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 14:51:42.400 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 14:51:42.401 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2533 ms
+08-Aug-2018 14:51:42.458 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Aug-2018 14:51:42.458 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+08-Aug-2018 14:51:42.478 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+08-Aug-2018 14:51:59.556 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Aug-2018 14:51:59.600 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer starting..
+08-Aug-2018 14:51:59.677 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.sql.GenericDataSource$Cache@4d255044]已经启动,下一次将在 2018-08-08 14:52:59.677 执行
+08-Aug-2018 14:51:59.678 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=plat;type=MYSQL(MySQL)
+08-Aug-2018 14:51:59.688 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=shouyu;type=MYSQL(MySQL)
+08-Aug-2018 14:52:00.330 信息 [localhost-startStop-1] com.susing.core.KingleService.__start 正在启动服务:会话服务器
+08-Aug-2018 14:52:00.331 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.core.SessionContext@65e754d8]已经启动,下一次将在 2018-08-08 14:55:00.33 执行
+08-Aug-2018 14:52:00.333 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START session-domain : 
+08-Aug-2018 14:52:00.334 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer init wasted in 734 millis
+08-Aug-2018 14:52:01.788 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [19,309] ms
+08-Aug-2018 14:52:01.808 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 14:52:01.825 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 14:52:01.832 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 19416 ms
+08-Aug-2018 14:55:06.017 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+08-Aug-2018 14:55:06.027 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+08-Aug-2018 14:55:06.029 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+08-Aug-2018 14:55:06.030 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Aug-2018 14:55:06.030 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Aug-2018 14:55:06.031 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Aug-2018 14:55:06.031 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+08-Aug-2018 14:55:06.031 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+08-Aug-2018 14:55:06.032 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Aug-2018 14:55:06.032 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu
+08-Aug-2018 14:55:06.032 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu
+08-Aug-2018 14:55:06.033 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\conf\logging.properties
+08-Aug-2018 14:55:06.033 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Aug-2018 14:55:06.033 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Aug-2018 14:55:06.033 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Aug-2018 14:55:06.034 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+08-Aug-2018 14:55:06.034 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu
+08-Aug-2018 14:55:06.036 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu
+08-Aug-2018 14:55:06.037 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\temp
+08-Aug-2018 14:55:06.038 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+08-Aug-2018 14:55:06.051 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08-Aug-2018 14:55:06.052 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08-Aug-2018 14:55:07.224 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+08-Aug-2018 14:55:07.430 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 14:55:08.135 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 14:55:08.146 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 14:55:08.152 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+08-Aug-2018 14:55:08.153 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2613 ms
+08-Aug-2018 14:55:08.213 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Aug-2018 14:55:08.214 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+08-Aug-2018 14:55:08.236 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+08-Aug-2018 14:55:22.920 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Aug-2018 14:55:22.959 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer starting..
+08-Aug-2018 14:55:23.015 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.sql.GenericDataSource$Cache@c3c77b3]已经启动,下一次将在 2018-08-08 14:56:23.015 执行
+08-Aug-2018 14:55:23.016 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=plat;type=MYSQL(MySQL)
+08-Aug-2018 14:55:23.020 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=shouyu;type=MYSQL(MySQL)
+08-Aug-2018 14:55:23.434 信息 [localhost-startStop-1] com.susing.core.KingleService.__start 正在启动服务:会话服务器
+08-Aug-2018 14:55:23.434 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.core.SessionContext@68db7547]已经启动,下一次将在 2018-08-08 14:58:23.434 执行
+08-Aug-2018 14:55:23.437 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START session-domain : 
+08-Aug-2018 14:55:23.438 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer init wasted in 480 millis
+08-Aug-2018 14:55:24.620 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [16,384] ms
+08-Aug-2018 14:55:24.626 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Aug-2018 14:55:24.644 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+08-Aug-2018 14:55:24.650 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 16495 ms

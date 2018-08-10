@@ -20,8 +20,5 @@ export class AppComponent {
   constructor() {
 
 
-    console.log('99999999999999999999999999999999999999999999');
    }
-
-
 }

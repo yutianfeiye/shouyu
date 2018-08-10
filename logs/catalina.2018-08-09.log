@@ -1,0 +1,44 @@
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\platform\jdk\jre
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_112-b15
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\shouyu
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\shouyu
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\shouyu\conf\logging.properties
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\shouyu
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\shouyu
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\shouyu\temp
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+09-Aug-2018 09:06:04.520 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+09-Aug-2018 09:06:05.482 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+09-Aug-2018 09:06:05.741 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-Aug-2018 09:06:06.395 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-Aug-2018 09:06:06.405 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-Aug-2018 09:06:06.410 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-Aug-2018 09:06:06.411 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2315 ms
+09-Aug-2018 09:06:06.445 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-Aug-2018 09:06:06.445 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-Aug-2018 09:06:06.462 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\shouyu\web\ROOT]
+09-Aug-2018 09:06:21.979 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2018 09:06:22.020 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer starting..
+09-Aug-2018 09:06:22.070 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.sql.GenericDataSource$Cache@4d255044]已经启动,下一次将在 2018-08-09 09:07:22.07 执行
+09-Aug-2018 09:06:22.070 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=plat;type=MYSQL(MySQL)
+09-Aug-2018 09:06:22.081 信息 [localhost-startStop-1] com.susing.sql.DataSourceFactory.loadDataSource 已注册一个连接器 name=shouyu;type=MYSQL(MySQL)
+09-Aug-2018 09:06:22.467 信息 [localhost-startStop-1] com.susing.core.KingleService.__start 正在启动服务:会话服务器
+09-Aug-2018 09:06:22.467 信息 [localhost-startStop-1] com.susing.core.TaskManager.runNxt 计划[com.susing.core.SessionContext@65e754d8]已经启动,下一次将在 2018-08-09 09:09:22.467 执行
+09-Aug-2018 09:06:22.467 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START session-domain : 
+09-Aug-2018 09:06:22.475 信息 [localhost-startStop-1] com.susing.core.KingleSystem.SERVER_START YacusServer init wasted in 457 millis
+09-Aug-2018 09:06:23.693 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\shouyu\web\ROOT] has finished in [17,222] ms
+09-Aug-2018 09:06:23.695 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-Aug-2018 09:06:23.705 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-Aug-2018 09:06:23.713 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 17301 ms

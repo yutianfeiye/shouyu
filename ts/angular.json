@@ -1,0 +1,235 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "speech-to-text": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "polyfills": "src/polyfills.ts",
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "styles": [
+	     "node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.min.css",
+              "src/styles.scss",
+              "node_modules/material-design-icons/iconfont/material-icons.css"
+            ],
+            "scripts": [
+              "src/assets/cwa/lib/polyfills.js",
+              "src/assets/cwa/lib/zip.js",
+              "src/assets/cwa/lib/zip-ext.js",
+              "src/assets/cwa/lib/zip-dv-ext.js",
+              "src/assets/cwa/lib/inflate.js",
+              "src/assets/cwa/lib/CWAEnv.js",
+              "src/assets/cwa/lib/SToCAObj.js",
+              "src/assets/cwa/lib/FourCC.js",
+              "src/assets/cwa/lib/pretty-data-fix.js",
+              "src/assets/cwa/lib/Config.js",
+              "src/assets/cwa/lib/Shader.js",
+              "src/assets/cwa/lib/Texture.js",
+              "src/assets/cwa/lib/VBO.js",
+              "src/assets/cwa/lib/E3Vec.js",
+              "src/assets/cwa/lib/RotQuat.js",
+              "src/assets/cwa/lib/TRXform.js",
+              "src/assets/cwa/lib/animgen.js",
+              "src/assets/cwa/lib/AvDefView.js",
+              "src/assets/cwa/lib/AvDataAccess.js",
+              "src/assets/cwa/lib/AvatarCamera.js",
+              "src/assets/cwa/lib/AvCache.js",
+              "src/assets/cwa/lib/CASTRSet.js",
+              "src/assets/cwa/lib/CASMorph.js",
+              "src/assets/cwa/lib/CASFrame.js",
+              "src/assets/cwa/lib/Bone.js",
+              "src/assets/cwa/lib/Skeleton.js",
+              "src/assets/cwa/lib/Morphvertex.js",
+              "src/assets/cwa/lib/MorphTarget.js",
+              "src/assets/cwa/lib/MorphsManager.js",
+              "src/assets/cwa/lib/MeshVertex.js",
+              "src/assets/cwa/lib/Mesh.js",
+              "src/assets/cwa/lib/HNSDefs.js",
+              "src/assets/cwa/lib/antlr3-all-min.js",
+              "src/assets/cwa/lib/Ham4Parser.js",
+              "src/assets/cwa/lib/HamLexer.js",
+              "src/assets/cwa/lib/HMLBuilder.js",
+              "src/assets/cwa/lib/HNSSign.js",
+              "src/assets/cwa/lib/XSLT.js",
+              "src/assets/cwa/lib/HtoG.js",
+              "src/assets/cwa/lib/AnimgenInstance.js",
+              "src/assets/cwa/lib/AmbientAnim.js",
+              "src/assets/cwa/lib/Character.js",
+              "src/assets/cwa/lib/AvSpeedController.js",
+              "src/assets/cwa/lib/CASAnimation.js",
+              "src/assets/cwa/lib/AnimScheduler.js",
+              "src/assets/cwa/lib/SigningAvatar.js",
+              "src/assets/cwa/lib/HTMLForAvatarGUI.js",
+              "src/assets/cwa/lib/AvatarGUI.js",
+              "src/assets/cwa/allcsa1.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "speech-to-text:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "speech-to-text:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "speech-to-text:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "scripts": [
+              "src/assets/cwa/lib/polyfills.js",
+              "src/assets/cwa/lib/zip.js",
+              "src/assets/cwa/lib/zip-ext.js",
+              "src/assets/cwa/lib/zip-dv-ext.js",
+              "src/assets/cwa/lib/inflate.js",
+              "src/assets/cwa/lib/CWAEnv.js",
+              "src/assets/cwa/lib/SToCAObj.js",
+              "src/assets/cwa/lib/FourCC.js",
+              "src/assets/cwa/lib/pretty-data-fix.js",
+              "src/assets/cwa/lib/Config.js",
+              "src/assets/cwa/lib/Shader.js",
+              "src/assets/cwa/lib/Texture.js",
+              "src/assets/cwa/lib/VBO.js",
+              "src/assets/cwa/lib/E3Vec.js",
+              "src/assets/cwa/lib/RotQuat.js",
+              "src/assets/cwa/lib/TRXform.js",
+              "src/assets/cwa/lib/animgen.js",
+              "src/assets/cwa/lib/AvDefView.js",
+              "src/assets/cwa/lib/AvDataAccess.js",
+              "src/assets/cwa/lib/AvatarCamera.js",
+              "src/assets/cwa/lib/AvCache.js",
+              "src/assets/cwa/lib/CASTRSet.js",
+              "src/assets/cwa/lib/CASMorph.js",
+              "src/assets/cwa/lib/CASFrame.js",
+              "src/assets/cwa/lib/Bone.js",
+              "src/assets/cwa/lib/Skeleton.js",
+              "src/assets/cwa/lib/Morphvertex.js",
+              "src/assets/cwa/lib/MorphTarget.js",
+              "src/assets/cwa/lib/MorphsManager.js",
+              "src/assets/cwa/lib/MeshVertex.js",
+              "src/assets/cwa/lib/Mesh.js",
+              "src/assets/cwa/lib/HNSDefs.js",
+              "src/assets/cwa/lib/antlr3-all-min.js",
+              "src/assets/cwa/lib/Ham4Parser.js",
+              "src/assets/cwa/lib/HamLexer.js",
+              "src/assets/cwa/lib/HMLBuilder.js",
+              "src/assets/cwa/lib/HNSSign.js",
+              "src/assets/cwa/lib/XSLT.js",
+              "src/assets/cwa/lib/HtoG.js",
+              "src/assets/cwa/lib/AnimgenInstance.js",
+              "src/assets/cwa/lib/AmbientAnim.js",
+              "src/assets/cwa/lib/Character.js",
+              "src/assets/cwa/lib/AvSpeedController.js",
+              "src/assets/cwa/lib/CASAnimation.js",
+              "src/assets/cwa/lib/AnimScheduler.js",
+              "src/assets/cwa/lib/SigningAvatar.js",
+              "src/assets/cwa/lib/HTMLForAvatarGUI.js",
+              "src/assets/cwa/lib/AvatarGUI.js",
+              "src/assets/cwa/allcsa1.js"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/material-design-icons/iconfont/material-icons.css"
+            ],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "speech-to-text-e2e": {
+      "root": "",
+      "sourceRoot": "e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "./protractor.conf.js",
+            "devServerTarget": "speech-to-text:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "speech-to-text",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
+}

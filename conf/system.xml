@@ -1,0 +1,69 @@
+ <?xml version="1.0" encoding="GB2312"?>
+<!-- temp-dir=""-->
+<config>
+<!---->
+	<session-config session-connection="cert" session-domain="" session-listener="com.kinglib.contrib.PlatSessionListener"/>
+
+	<application-config title="手语翻译" logo="/login/logo.jpg"/>
+
+	<sso server="true" >
+		<login-config auth-type="md5" authentication-handler="com.kinglib.sso.auth.provider.SampleHandler" />
+		<init-param name="grantingTimeout" value="7200"/>
+		<init-param name="serviceTimeout" value="300"/>
+        <init-param name="loginTimeout" value="86400"/>
+		<init-param name="loginForm" value="/login/login.html"/>
+		<init-param name="redirect" value="/login/redirect.jcp"/>
+        <init-param name="serviceSuccess" value="/login/goService.jcp"/>
+		<init-param name="confirmService" value="/login/warnService.jcp"/>
+		<init-param name="logoutPage" value="/login/logout.jcp"/>
+	</sso>
+
+
+	<init-properties>
+
+		<jacper-config class-path="f:\shouyu\dist">
+			<path url-starts="/" source-path="f:\shouyu\web"/>
+		</jacper-config>
+
+		<!--  value !<>  accept : 0 禁止,1允许 2 重新登陆 -->	
+
+		<security-config default="0">
+			<part url-starts="/login" accept="1"/>
+			<part url-starts="/sample" accept="1"/>
+			<part url-starts="/lib" accept="1"/>
+			<part url-starts="/pub" accept="1"/>
+			<part url-starts="/jsvm" accept="1"/>
+			<part url-starts="/" session-name="user_id" session-value="" accept="2"/>
+			<part url-starts="/" session-name="user_id" session-value="!" accept="1"/>
+		</security-config>
+
+		<init-param name="js_lib" value="f:\shouyu\web"/>
+		<init-param name="js_debug" value="1"/>
+		<init-param name="admin_password" value="bizdict" />
+		<init-param name="super_password" value="bizdict" />
+		<init-param name="auth_type" value="1" />
+		<init-param name="icon_path" value="f:\shouyu\web\themes\icon\" />
+		<init-param name="temp_path" value="f:\shouyu\web\temp\" />
+	</init-properties>
+
+	<license key=""/>
+
+	<easy-connection>
+		<connection name="plat">
+			<init-param name="eSimpleType" value="MySQL"/>
+			<init-param name="driverClassName" value="com.mysql.jdbc.Driver"/>
+			<init-param name="eNameMapped" value="plat=platform;cert=certification;work=workflow;utils=utils;"/>
+			<init-param name="url" value="jdbc:mysql://192.168.1.7:3306/platform?generateSimpleParameterMetadata=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+			<init-param name="username" value="platform"/>
+			<init-param name="password" value="bizdict"/>
+		</connection>
+		<connection name="shouyu">
+			<init-param name="eSimpleType" value="MySQL"/>
+			<init-param name="driverClassName" value="com.mysql.jdbc.Driver"/>
+			<init-param name="eNameMapped" value="shouyu=shouyu"/>
+			<init-param name="url" value="jdbc:mysql://192.168.1.7:3306/shouyu?generateSimpleParameterMetadata=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+			<init-param name="username" value="shouyu"/>
+			<init-param name="password" value="bizdict"/>
+		</connection>
+	</easy-connection>
+</config>

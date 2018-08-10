@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>用户管理</h1>
+<div mat-dialog-content>
+  <div fxLayout="column" >
+        <mat-form-field fxFlexFill>
+          <input matInput placeholder="用户名" [(ngModel)]="data.user_name"/>
+        </mat-form-field>
+        <mat-form-field fxFlexFill>
+          <input matInput placeholder="姓名"  [(ngModel)]="data.real_name"/>
+        </mat-form-field>
+        <mat-form-field fxFlexFill>
+            <input matInput placeholder="密码"  type="password" [(ngModel)]="data.password"/>
+        </mat-form-field>
+    </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">取消</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>保存</button>
+</div>

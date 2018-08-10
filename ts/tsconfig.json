@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "../web/ROOT",
+    "outDir": "dist",
      "baseUrl": ".",
     "sourceMap": true,
     "declaration": false,
@@ -9,6 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+
     "typeRoots": [
       "node_modules/@types"
     ],  
@@ -23,3 +24,4 @@
     ]
   }
 }
+   

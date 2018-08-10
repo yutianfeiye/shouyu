@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>同义词管理</h1>
+<div mat-dialog-content>
+  <div fxLayout="column" >
+        <mat-form-field fxFlexFill>
+          <input matInput placeholder="同义词" [(ngModel)]="data.synonyms"/>
+        </mat-form-field>
+    </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">取消</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>保存</button>
+</div>

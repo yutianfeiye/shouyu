@@ -1,0 +1,60 @@
+<header class="header">
+  <navigation-trigger></navigation-trigger>
+
+  <div class="header__logo">
+    <h1><a [routerLink]="['']">手语翻译管理</a></h1>
+  </div>
+
+  <ul class="top-nav">
+    <li class="d-xl-none"><a (click)="search.searchActive = true"><i class="zmdi zmdi-search"></i></a></li>
+    <li dropdown class="d-none d-sm-inline-block">
+      <a dropdownToggle><i class="zmdi zmdi-apps"></i></a>
+      <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--block" role="menu">
+        <div class="row app-shortcuts">
+          <a class="col-4 app-shortcuts__item" href="/home/dict">
+            <i class="zmdi zmdi-calendar bg-red"></i>
+            <small class="">字典管理</small>
+          </a>
+          <a class="col-4 app-shortcuts__item" href="/home/synonyms">
+            <i class="zmdi zmdi-file-text bg-blue"></i>
+            <small class="">同义词管理</small>
+          </a>
+          <a class="col-4 app-shortcuts__item"  href="/home/grammar">
+            <i class="zmdi zmdi-email bg-teal"></i>
+            <small class="">语法管理</small>
+          </a>
+          <a class="col-4 app-shortcuts__item" href="/home/user">
+            <i class="zmdi zmdi-view-headline bg-orange"></i>
+            <small class="">用户管理</small>
+          </a>
+        </div>
+      </div>
+    </li>
+
+    <li dropdown class="d-none d-sm-inline-block">
+      <a dropdownToggle=""><i class="zmdi zmdi-more-vert"></i></a>
+
+      <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--icon" role="menu">
+        <div class="dropdown-item theme-switch">
+         样式选择
+          <div class="btn-group btn-group--colors mt-2 d-block">
+            <label class="btn bg-green" [(ngModel)]="maThemeModel" btnRadio="green" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-blue" [(ngModel)]="maThemeModel" btnRadio="blue" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-red" [(ngModel)]="maThemeModel" btnRadio="red" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-orange" [(ngModel)]="maThemeModel" btnRadio="orange" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-teal" [(ngModel)]="maThemeModel" btnRadio="teal" uncheckable (click)="setTheme()"></label>
+            <br>
+            <label class="btn bg-cyan" [(ngModel)]="maThemeModel" btnRadio="cyan" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-blue-grey" [(ngModel)]="maThemeModel" btnRadio="blue-grey" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-purple" [(ngModel)]="maThemeModel" btnRadio="purple" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-indigo" [(ngModel)]="maThemeModel" btnRadio="indigo" uncheckable (click)="setTheme()"></label>
+            <label class="btn bg-lime" [(ngModel)]="maThemeModel" btnRadio="lime" uncheckabl (click)="setTheme()"e></label>
+          </div>
+        </div>
+        <!-- <a href="" class="dropdown-item">退出</a> -->
+        <!-- <a href="" class="dropdown-item">Clear Local Storage</a> -->
+      </div>
+    </li>
+  </ul>
+
+</header>

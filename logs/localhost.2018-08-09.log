@@ -1,0 +1,2 @@
+09-Aug-2018 09:06:21.979 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+09-Aug-2018 09:06:22.772 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'rest'

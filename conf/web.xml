@@ -115,6 +115,7 @@
     </servlet>
 
 
+
   <!-- The JSP page compiler and execution servlet, which is the mechanism  -->
   <!-- used by Tomcat to support JSP pages.  Traditionally, this servlet    -->
   <!-- is mapped to the URL pattern "*.jsp".  This servlet supports the     -->
@@ -392,6 +393,38 @@
   <!-- that, by default, the CGI and SSI servlets are *not* mapped.  You    -->
   <!-- must uncomment these mappings (or add them to your application's own -->
   <!-- web.xml deployment descriptor) to enable these services              -->
+
+	<context-param>
+		<param-name>yacus_config</param-name>
+		<param-value>f:\shouyu\conf\system.xml</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>KingleFilter</filter-name>
+		<filter-class>com.susing.KingleServer</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>KingleFilter</filter-name>
+		<url-pattern>*.jcp</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>com.susing.KingleServer</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>rest</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>rest</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
 
     <!-- The mapping for the default servlet -->
     <servlet-mapping>

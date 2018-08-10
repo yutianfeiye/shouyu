@@ -1,6 +1,48 @@
 <div fxFlexFill fxLayout="row" fxLayoutGap='10px'>
-  <mat-card fxFlex="68" fxFlexFill fxLayout='column'>
+    <mat-card fxFlex="16" fxFlexFill fxLayout='column' style="padding: 5px">
+       <mat-card-title>
+         <div class='left-title'>
+          <mat-form-field>
+            <mat-select [(value)]="lang" (selectionChange)='onSelect($event)'>
+              <mat-option value="zh_cn">中文</mat-option>
+              <mat-option value="en_us">美国英语</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+        <mat-divider></mat-divider>
+      </mat-card-title> 
+      <mat-card-content  >
+          <perfect-scrollbar  class="scroll-container" 
+                          fxFlex="auto" 
+                          [config]="config" 
+                          [scrollIndicators]="true"> 
+                          <div align="center" fxFlexFill >
+                              <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                                  <mat-tree-node *matTreeNodeDef="let node"  matTreeNodeToggle matTreeNodePadding (click)="nodeSelect(node)" >
+                                    <button mat-icon-button disabled></button>
+                                    {{node.name}} 
+                                  </mat-tree-node>
+                                  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding (click)="nodeSelect(node)">
+                                    <button mat-icon-button matTreeNodeToggle  [attr.aria-label]="'toggle ' + node.name">
+                                      <mat-icon class="mat-icon-rtl-mirror">
+                                        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                      </mat-icon>
+                                    </button>
+                                    {{node.name}} 
+                                  </mat-tree-node>
+                                </mat-tree>
+                          </div>
+            </perfect-scrollbar> 
+        <div class="fab-button">
+          <button mat-fab>
+            <mat-icon color="accent" class="fab-item-icon"  (click)="openDialog()">add</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  <mat-card fxFlex="55" fxFlexFill fxLayout='column'>
     <mat-card-content fxFlexFill>
+      <div fxFlexFill fxLayout='column'>
       <form [formGroup]="form"  novalidate>
         <div fxLayout="row" class='rows'>
           <div fxFlex="50" fxLayout="row">
@@ -15,25 +57,25 @@
           </div>
         </div>
         <div fxLayout="row" fxLayoutAlign="start end" style='height:150px' class='rows'>
-          <div fxFlex="50" fxLayout="row">
+          <div fxFlex="100" fxLayout="row">
             <mat-form-field fxFlexFill>
               <textarea matInput placeholder="描述" formControlName="description" matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
             </mat-form-field>
           </div>
-          <div fxFlex="50" fxLayout="row">
-            <!-- <fancy-image-uploader [options]="options" (onUpload)="onUpload($event)"></fancy-image-uploader> -->
-          </div>
+          <!-- <div fxFlex="50" fxLayout="row">
+           <fancy-image-uploader [options]="options" (onUpload)="onUpload($event)"></fancy-image-uploader> 
+          </div> -->
         </div>
         <div fxLayout="row" class='rows'>
           <div fxFlex="100" fxLayout="row">
             <mat-form-field fxFlexFill>
-              <input #hansField  matInput placeholder="手势" class="ham" name="hans" formControlName="hans">
+              <input #hansField  matInput placeholder="手势" class="ham" name="hamnosys" formControlName="hamnosys">
             </mat-form-field>
           </div>
         </div>
       </form>
-      <mat-tab-group>
-        <mat-tab label="手型">
+      <mat-tab-group fxFlexFill>
+        <mat-tab label="手型">  
           <div id="keyboard_hsh">
             <table>
               <tr>
@@ -997,6 +1039,7 @@
           </div>
         </mat-tab>
       </mat-tab-group>
+    </div>
       <div class="fab-button">
         <button mat-fab (click)="onSubmit()">
           <mat-icon color="accent" class="fab-item-icon">check</mat-icon>
@@ -1004,7 +1047,7 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <mat-card fxFlex="32" fxFlexFill fxLayout='column'>
+  <mat-card fxFlex="29" fxFlexFill fxLayout='column'>
     <!-- <mat-card-title>
         <h3 class="mat-title">
           手语字典管理
@@ -1014,7 +1057,7 @@
   <mat-card-content fxFlexFill >
     <div class="CWASAPanel av0" align="center" fxFlexFill></div>
     <div class="fab-button">
-      <button mat-fab>
+      <button mat-fab (click)="play()">
         <mat-icon color="accent" class="fab-item-icon">play_arrow</mat-icon>
       </button>
     </div>

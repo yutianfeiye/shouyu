@@ -1,0 +1,31 @@
+.mat-table-container {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fab-button {
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9;
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
+  color: white;
+}
+
+.fab-item-icon {
+  color: white
+}
+
+
+:host {
+  width: 100%;
+}

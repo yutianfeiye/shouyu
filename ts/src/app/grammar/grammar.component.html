@@ -1,0 +1,47 @@
+<div fxFlexFill fxLayout="row" fxLayoutGap='10px'>
+  <mat-card fxFlexFill>
+    <mat-card-content fxFlexFill fxLayout="column" >
+          <td-data-table
+            #dataTable
+            [data]="filteredData"
+            [columns]="columns"
+            [selectable]="selectable"
+            [clickable]="clickable"
+            [multiple]="multiple"
+            [sortable]="true"
+            [sortBy]="sortBy"
+            [(ngModel)]="selectedRows"
+            [sortOrder]="sortOrder"
+            (sortChange)="sort($event)"
+            (rowClick)="showAlert($event)"
+            [style.flex]="1.0">
+            <ng-template tdDataTableTemplate="id" let-value="value">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="deleteGrammar(value)">
+                      <mat-icon>delete</mat-icon>
+                      <span>删除</span>
+                    </button>
+                    <button mat-menu-item (click)="editGrammar(value)">
+                      <mat-icon>create</mat-icon>
+                      <span>修改</span>
+                    </button>
+                  </mat-menu>
+            </ng-template>
+          </td-data-table>
+          <div class="md-padding" *ngIf="!dataTable.hasData" layout="row" layout-align="center center">
+            <h3>无数据显示.</h3>
+          </div>
+          <td-paging-bar #pagingBar [pageSize]="pageSize" [total]="filteredTotal" (change)="page($event)">
+              {{pagingBar.range}} <span hide-xs>of {{pagingBar.total}}</span>
+            </td-paging-bar> 
+            <div class="fab-button">
+                <button mat-fab>
+                  <mat-icon color="accent" class="fab-item-icon"  (click)="openDialog()">add</mat-icon>
+                </button>
+            </div>
+    </mat-card-content>
+  </mat-card>
+  </div>

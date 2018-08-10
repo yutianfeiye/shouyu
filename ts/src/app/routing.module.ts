@@ -1,10 +1,33 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { LoginComponent } from './login/login.component';
+import { AuthenticatedGuard } from './login/authenticated.guard';
 
 const routes: Routes = [
-  { path: '', loadChildren: 'app/dictionary/item-input.module#ItemInputModule' },
-  { path: 'speech', loadChildren: 'app/speech-to-text/index.module#IndexModule' }
+  {
+    path: 'home',
+     loadChildren: './layout/layout.module#LayoutModule',
+     // canActivate: [AuthenticatedGuard],
+     data: {
+       i18n: {
+         isRoot: true
+       }
+     }
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      meta: {
+        title: '智能手语翻译系统'
+      }
+    }
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

@@ -18,12 +18,11 @@
     "forin": true,
     "import-blacklist": [
       true,
-      "rxjs",
       "rxjs/Rx"
     ],
     "import-spacing": true,
     "indent": [
-      true,
+      false,
       "spaces"
     ],
     "interface-over-type-literal": true,
@@ -77,7 +76,7 @@
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
     "one-line": [
-      true,
+      false,
       "check-open-brace",
       "check-catch",
       "check-else",
@@ -110,7 +109,7 @@
     "unified-signatures": true,
     "variable-name": false,
     "whitespace": [
-      true,
+      false,
       "check-branch",
       "check-decl",
       "check-operator",
@@ -129,15 +128,15 @@
       "app",
       "kebab-case"
     ],
-    "no-output-on-prefix": true,
+    "no-output-on-prefix": false,
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
+    "no-input-rename": false,
+    "no-output-rename": false,
     "use-life-cycle-interface": false,
     "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
+    "component-class-suffix": false,
+    "directive-class-suffix": false
   }
 }
