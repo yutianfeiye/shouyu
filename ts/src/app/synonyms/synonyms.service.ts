@@ -28,7 +28,7 @@ export class SynonymsService {
     const httpOptions = {
       params: httpParams
     };
-    return this._http.get(url, httpOptions).map((res: HttpResponse<any>) => res.body.json());
+    return this._http.get(url, httpOptions).map((res: HttpResponse<any>) => res);
   }
   getSynonyms(id) {
     const url = INTERNAL_DOCS_URL + '/dictionary/getSynonym';
@@ -51,6 +51,6 @@ export class SynonymsService {
           'Content-Type': 'application/x-www-form-urlencoded'
         })
       };
-    return this._http.post(postUrl, httpParams.toString(), httpOptions).map((res: HttpResponse<any>) => res.body.json());
+    return this._http.post(postUrl, httpParams.toString(), httpOptions).map((res: HttpResponse<any>) => res);
   }
 }

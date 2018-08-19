@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { WorkerService, } from './../worker/worker.service';
-import { WebWorker } from './../worker/web-worker';
+import { WorkerService, } from '../worker/worker.service';
+import { WebWorker } from '../worker/web-worker';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()

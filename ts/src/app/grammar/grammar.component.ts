@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, ViewChild } from '@angular/core';
+import { Component, OnInit, HostBinding, ViewChild ,ChangeDetectorRef } from '@angular/core';
 import {
   TdDataTableSortingOrder, TdDataTableService, TdDataTableComponent,
   ITdDataTableSortChangeEvent, ITdDataTableColumn
@@ -6,8 +6,10 @@ import {
 
 import { IPageChangeEvent, TdPagingBarComponent } from '../../lib/paging';
 import { InternalDocsService } from './grammar.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {MatDialog} from '@angular/material';
 import {GrammarDialog} from './grammar.dialog';
+import {TranslateService} from '@ngx-translate/core';
+import { CookieStorage} from '../../lib/cookie';
 
 const NUMBER_FORMAT: (v: any) => any = (v: number) => v;
 const DECIMAL_FORMAT: (v: any) => any = (v: number) => v.toFixed(2);
@@ -35,12 +37,7 @@ export class GrammarComponent implements OnInit {
 
   @ViewChild(TdPagingBarComponent) pagingBar: TdPagingBarComponent;
 
-  columns: ITdDataTableColumn[] = [
-    { name: 'lang', label: '语言', hidden: false, width: 100 },
-    { name: 'nl_grammar', label: '自然语言语法', sortable: true, width: 450 },
-    { name: 'sl_grammer', label: '手语语法', filter: true, sortable: false },
-    { name: 'id', label: '操作', width: 100 }
-  ];
+  columns: ITdDataTableColumn[];
 
   data: any[];
   basicData: any[];
@@ -57,14 +54,36 @@ export class GrammarComponent implements OnInit {
   fromRow = 1;
   currentPage = 1;
   pageSize = 50;
-  sortBy = 'lang';
+  sortBy:string;
   sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Descending;
 
   constructor(private _dataTableService: TdDataTableService,
     private _internalDocsService: InternalDocsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public _cd:ChangeDetectorRef,
+    public translate:TranslateService,
     //  private _dialogService: TdDialogService
-  ) { }
+  ) {
+    translate.addLangs(['en', 'zh']);
+    translate.setDefaultLang('en');
+    if(CookieStorage.hasCookie('lang')){
+      const lang = CookieStorage.getCookie('lang').value;
+      this.translate.use(lang);
+    }else{
+      const browserLang = translate.getBrowserLang();
+      this.translate.use(browserLang.match(/en|zh/) ?browserLang : 'en');
+    }
+
+    this.translate.get('GRAMMAR.LANGUAGE').subscribe((translated: string) => {
+      this.columns = [
+        { name: 'lang', label: this.translate.instant('GRAMMAR.LANGUAGE'), hidden: false, width: 100 },
+        { name: 'nl_grammar', label:this.translate.instant('GRAMMAR.NL_GRAMMAR'), sortable: true, width: 450 },
+        { name: 'sl_grammer', label:this.translate.instant('GRAMMAR.SL_GRAMMAR'), filter: true, sortable: false },
+        { name: 'id', label: this.translate.instant('USER.OPERATION'), width: 100 }
+      ];
+      this.sortBy = 'lang';
+   });
+  }
 
 
   openDialog(): void {
@@ -77,7 +96,7 @@ export class GrammarComponent implements OnInit {
       if (result) {
         result['type']='save';
         this.postGrammar(result).subscribe(res => {
-           if (res.success) {
+           if (res['success']) {
                this.ngOnInit();
            } else {
           // //  this.submitted = false;
@@ -90,7 +109,7 @@ export class GrammarComponent implements OnInit {
 
   deleteGrammar(id){
     this._internalDocsService.deleteGrammar(id).subscribe(res => {
-       if (res.success) {
+       if (res['success']) {
            this.ngOnInit();
        } else {
          console.log(res['message']);

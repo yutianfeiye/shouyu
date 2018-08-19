@@ -91,9 +91,9 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 			Cookie[] cookies = request.getCookies();
 			String userId=this.authenticate(jacper,email,pwd);
 			if (!userId.equals("")){
-				  //session.invalidate();
+				  session.invalidate();
 				  String portalId = request.getParameter("portal");	  
-				 // request.createSession(userId,-1);
+				  request.createSession(userId,email,-1);
 				 // SystemEvent.fire("USER_LOGIN", jacper);
 				  request.getSession().setAttribute("user_name",email);
 				  request.getSession().setAttribute("password",pwd);
@@ -121,8 +121,8 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 	    response.setHeader("Cache-Control","no-store");
 	    response.setDateHeader("Expires", 0);
 
-		HttpSession session = request.getSession();
-		session.invalidate();  
+	    KingleSession session = (KingleSession)request.getSession();
+		session.invalidate1();  
 		JSONObject resultJSON = new JSONObject();
 		try {
 			resultJSON.put("success", true);
@@ -140,7 +140,6 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 			Connection con=jacper.getConnection("shouyu");
 			String sql0="select user_id from user_base where user_name=? and password=?";
 			String [] user=con.getRow(sql0,new String[]{userName,password});
-			System.out.println(user[0]+"+++++++++++++++++++++++++++++++");;
 			if(user!=null) userId=user[0];
 			con.close();
 		} catch (Exception e) {

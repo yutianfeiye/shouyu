@@ -32,7 +32,7 @@ export class UserService {
     const httpOptions = {
       params: httpParams
     };
-    return this._http.get(url, httpOptions).map((res: HttpResponse<any>) => res.body.json());
+    return this._http.get(url, httpOptions).map((res: HttpResponse<any>) => res);
   }
 
   getUser(id) {
@@ -58,6 +58,6 @@ export class UserService {
         'Content-Type':  'application/x-www-form-urlencoded'
       })
     };
-    return this._http.post(postUrl, httpParams.toString(), httpOptions).map((res: HttpResponse<any>) => res.body.json());
+    return this._http.post(postUrl, httpParams.toString(), httpOptions).map((res: HttpResponse<any>) => res);
   }
 }

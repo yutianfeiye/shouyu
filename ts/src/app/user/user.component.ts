@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, ViewChild } from '@angular/core';
+import { Component, OnInit,  ViewChild,ChangeDetectorRef } from '@angular/core';
 import {
   TdDataTableSortingOrder, TdDataTableService, TdDataTableComponent,
   ITdDataTableSortChangeEvent, ITdDataTableColumn
@@ -8,6 +8,9 @@ import { IPageChangeEvent, TdPagingBarComponent } from '../../lib/paging';
 import { UserService } from './user.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {UserDialog} from './user.dialog';
+
+import {TranslateService,TranslatePipe} from '@ngx-translate/core';
+import { CookieStorage} from '../../lib/cookie';
 
 const NUMBER_FORMAT: (v: any) => any = (v: number) => v;
 const DECIMAL_FORMAT: (v: any) => any = (v: number) => v.toFixed(2);
@@ -22,7 +25,7 @@ export interface UserData {
 @Component({
   selector: 'user-table',
   styleUrls: ['user.component.scss'],
-  templateUrl: 'user.component.html',
+  templateUrl: 'user.component.html'
   // animations: [slideInDownAnimation],
  // preserveWhitespaces: true,
 })
@@ -30,17 +33,11 @@ export interface UserData {
 export class UserComponent implements OnInit {
 
 
-  // @HostBinding('@routeAnimation') routeAnimation = true;
-  // @HostBinding('class.td-route-animation') classAnimation = true;
-
   @ViewChild(TdPagingBarComponent) pagingBar: TdPagingBarComponent;
 
-  columns: ITdDataTableColumn[] = [
-    { name: 'user_name', label: '用户名', sortable: true, width: 450 },
-    { name: 'real_name', label: '姓名', filter: true, sortable: false },
-    { name: 'password', label: '密码', filter: false, width: 350 },
-    { name: 'id', label: '操作', width: 100 }
-  ];
+  translatePipe:TranslatePipe;
+
+  columns: ITdDataTableColumn[];
 
   data: any[];
   basicData: any[];
@@ -57,14 +54,35 @@ export class UserComponent implements OnInit {
   fromRow = 1;
   currentPage = 1;
   pageSize = 50;
-  sortBy = 'user_name';
+  sortBy:string;
   sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Descending;
 
   constructor(private _dataTableService: TdDataTableService,
     private _internalDocsService: UserService,
-    public dialog: MatDialog
-    //  private _dialogService: TdDialogService
-  ) { }
+    public dialog: MatDialog,
+    public _cd:ChangeDetectorRef,
+    public translate:TranslateService,
+  ) {
+    translate.addLangs(['en', 'zh']);
+    translate.setDefaultLang('en');
+    if(CookieStorage.hasCookie('lang')){
+      const lang = CookieStorage.getCookie('lang').value;
+      this.translate.use(lang);
+    }else{
+      const browserLang = translate.getBrowserLang();
+      this.translate.use(browserLang.match(/en|zh/) ?browserLang : 'en');
+    }
+
+    this.translate.get('LOGIN.USERNAME').subscribe((translated: string) => {
+      this.columns = [
+        { name: 'user_name', label: this.translate.instant('USER.USERNAME'), sortable: true, width: 450 },
+        { name: 'real_name', label:this.translate.instant('USER.REALNAME'), filter: true, sortable: false },
+        { name: 'password', label: this.translate.instant('USER.PASSWORD'), filter: false, width: 350 },
+        { name: 'id', label: this.translate.instant('USER.OPERATION'), width: 100 }
+      ];
+      this.sortBy = 'user_name';
+   });
+  }
 
 
   openDialog(): void {
@@ -77,9 +95,9 @@ export class UserComponent implements OnInit {
       if (result) {
         result['type']='save';
         this.postUser(result).subscribe(res => {
-           if (res.success) {
+          if (res['success']) {
                this.ngOnInit();
-           }
+          }
         });
       }
     });
@@ -87,7 +105,7 @@ export class UserComponent implements OnInit {
 
   deleteUser(id){
     this._internalDocsService.deleteUser(id).subscribe(res => {
-       if (res.success) {
+       if (res['success']) {
            this.ngOnInit();
        } else {
          console.log(res['message']);
@@ -153,9 +171,4 @@ export class UserComponent implements OnInit {
     this.filteredData = newData;
   }
 
-  showAlert(event: any): void {
-    // this._dialogService.openAlert({
-    //   message: 'You clicked on row: ' + event.row.first_name + ' ' + event.row.last_name,
-    // });
-  }
 }

@@ -1,22 +1,22 @@
-<h1 mat-dialog-title>语法映射管理</h1>
+<h1 mat-dialog-title>{{'GRAMMAR.GRAMMARMGT'| translate }}</h1>
 <div mat-dialog-content>
 
   <div fxLayout="column" >
       <mat-form-field fxFlexFill>
-          <mat-select [(ngModel)]="data.lang" >
-            <mat-option value="zh_cn">中文</mat-option>
-            <mat-option value="en_us">美国英语</mat-option>
+          <mat-select placeholder="{{'GRAMMAR.LANGUAGE'| translate }}" [(ngModel)]="data.lang" >
+            <mat-option value="zh_cn">{{'GRAMMAR.CHINESE'| translate }}</mat-option>
+            <mat-option value="en_us">{{'GRAMMAR.ENGLISH'| translate }}</mat-option>
           </mat-select>
       </mat-form-field>
         <mat-form-field fxFlexFill>
-          <textarea matInput placeholder="自然语言语法" [(ngModel)]="data.nl_grammar"   matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
+          <textarea matInput placeholder="{{'GRAMMAR.NL_GRAMMAR'| translate }}" [(ngModel)]="data.nl_grammar"   matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
         </mat-form-field>
         <mat-form-field fxFlexFill>
-          <textarea matInput placeholder="手语语法"  [(ngModel)]="data.sl_grammer"   matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
+          <textarea matInput placeholder=" {{'GRAMMAR.SL_GRAMMAR'| translate }}"  [(ngModel)]="data.sl_grammer"   matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
         </mat-form-field>
     </div>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="cancel()">取消</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>保存</button>
+  <button mat-button (click)="cancel()">{{'USER.CANCEL'| translate }}</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>{{'USER.SAVE'| translate }}</button>
 </div>

@@ -1,5 +1,5 @@
 import { groupBy } from 'rxjs/operator/groupBy';
-import { GroupedObservable } from 'rxjs/';
+import { GroupedObservable } from 'rxjs';
 import { mergeMap } from 'rxjs/operator/mergeMap';
 import { exhaustMap } from 'rxjs/operator/exhaustMap';
 import { map } from 'rxjs/operator/map';

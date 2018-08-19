@@ -1,0 +1,78 @@
+{
+  "LOGIN": {
+    "LOGIN": "登录",
+    "REGISTER": "注册",
+    "PASSWORD":"口令",
+    "USERNAME":"用户",
+     "LANGUAGE":"语言",
+     "REMEMBERME":"记住我",
+     "FORGOTPASSWORD":"忘记密码",
+     "NOACCOUNT":" 没有账号",
+     "EmailRequired":"用户名必填",
+     "PasswordRequired":"口令必填",
+     "CREATEACCOUNT":"创建账号",
+     "Setup":"设置",
+     "TITLE":"手语管理系统",
+     "AVATAR":"虚拟人",
+     "SPEED":"播放速度",
+     "Cancel":"取消",
+     "Confirm":"确定"
+  },
+  "COMMON": {
+    "DELETE":"删除",
+    "UPDATE":"更新",
+    "SAVE":"保存",
+    "CANCEL":"取消",
+    "LANGUAGE":"语言",
+    "CHINESE":"中文",
+    "ENGLISH":"英文"
+  },
+  "HEADER": {
+    "TITLE":"手语字典管理",
+    "EXIT":"退出",
+    "USERMGT":"用户管理",
+    "GRAMMARMGT":"语法管理",
+    "SYNONYMSMGT":"同义词管理",
+    "DICTMGT":"字典管理",
+    "STYLE":" 样式选择 "
+  },
+  "USER": {
+    "USERNAME":"用户名",
+    "REALNAME":"姓名",
+    "PASSWORD":"口令",
+    "OPERATION":"操作",
+    "SAVE":"保存",
+    "CANCEL":"取消",
+    "DELETE":"删除",
+    "UPDATE":"更新",
+    "USERMGT":"用户管理",
+    "NODATA":" 无数据显示"
+  },
+  "GRAMMAR": {
+    "LANGUAGE":"语言",
+    "CHINESE":"中文",
+    "ENGLISH":"英文",
+    "NL_GRAMMAR":"自然语言语法",
+    "SL_GRAMMAR":"手语语法",
+    "GRAMMARMGT":"语法映射管理"
+  },
+  "SYNOMYMS": {
+    "LANGUAGE":"语言",
+    "SYNOMYMS":"同义词",
+    "SYNOMYMSMGT":"同义词管理"
+  },
+  "DICTIONARY": {
+    "CATEGORY":"类别",
+    "CATEGORY_NAME":"类别名称",
+    "WORD":"单词",
+    "PINYIN":"拼音",
+    "DESCRIPTION":"描述",
+    "HAMNOSYS":"手势",
+    "HANDSHAPE":"手型",
+    "OREINTATION":"方向",
+    "POSITION":"位置",
+    "MOVEMENT1":"动作1",
+    "MOVEMENT2":"动作2",
+    "TWOHANDS":"双手"
+  }
+}

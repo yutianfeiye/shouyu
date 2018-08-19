@@ -14,6 +14,13 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {UserDialog} from './user.dialog';
+import {TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 const HOME_ROUTE = [
     { path: '', component: UserComponent }
@@ -40,7 +47,14 @@ const HOME_ROUTE = [
         MatDialogModule,
         MatFormFieldModule,
         PagingModule,
-        RouterModule.forChild(HOME_ROUTE)
+        RouterModule.forChild(HOME_ROUTE),
+        TranslateModule.forRoot({
+          loader: {
+              provide: TranslateLoader,
+              useFactory: HttpLoaderFactory,
+              deps: [HttpClient]
+          }
+        })
     ],
     entryComponents: [
         UserDialog

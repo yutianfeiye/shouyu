@@ -147,11 +147,6 @@
                     return function (resolve, reject) {
                         var DVWriter, cb, tag;
                         tag = ent;
-
-
-                        console.log(tag);
-                        console.log(resolve);
-
                         cb = function (content) {
                             if (tag === AvDataAccess.STD_JARP_TAG) {} else {}
                             return resolve(content);

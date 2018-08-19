@@ -1,19 +1,22 @@
 import { Inject, Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { URLSearchParams } from '@angular/http';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
 import { extAnimations } from '../../lib/animations';
 import { AuthService } from '../../lib/auth';
-import { LoginService } from '../login/login.service';
-import {TranslateService,TranslatePipe} from '@ngx-translate/core';
+import { LoginService } from './login.service';
+import {MatDialog} from '@angular/material';
+import {LoginDialog} from './login.dialog';
+import {SetupDialog} from './setup.dialog';
+import {TranslateService} from '@ngx-translate/core';
+import { RecorderService } from '../../lib/speech2text/core-audio/recorder/recorder.service';
 
-export let USER_STATUS_CODES = {
-  400: 'User already exists',
-  401: 'Invalid credentials',
-  500: 'Something went wrong...'
-};
+import { Cookie,CookieStorage} from '../../lib/cookie';
+
+export interface SetupData {
+  avatar: string;
+  speed: number;
+}
 
 @Component({
   selector: 'dotos-login',
@@ -22,79 +25,94 @@ export let USER_STATUS_CODES = {
   animations: extAnimations
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
-  loginFormErrors: any;
-  title = '手语管理系统';
-  usrPwd = '';
-  username = '';
-  password = '';
-
-  isProcessing: boolean;
-  note$: Observable<string>;
-  warn$: Observable<string>;
 
   authenticatedObs: Observable<boolean>;
-  loginServiceSub: Subscription;
-  authSub: Subscription;
-  lt = '';
-  logo = '';
-  authType = '';
-  jsDebug = '';
-  openRegister = false;
-  selectedValue: string;
-  langControl: FormControl;
-  languages = [];
 
-  /**
-   * Boolean used in telling the UI
-   * that the form has been submitted
-   * and is awaiting a response
-   */
-  submitted = false;
+  form: FormGroup;
 
-  /**
-   * Diagnostic message from received
-   * form request error
-   */
-  errorDiagnostic: string;
+  props: any = {
+    lang: 'cmn-Hans-CN',
+    onChange: (value) => console.log(value + '====') ,
+    onEnd: (value) => console.log(value + '#####')
+  };
 
-  translatePipe:TranslatePipe;
+
+  data:SetupData;
 
   constructor(
     private readonly auth: AuthService,
-   // private readonly i18nStore: Store<I18NState>,
-    private readonly translate: TranslateService,
     private _cd:ChangeDetectorRef,
     private _loginService: LoginService,
     private _router: Router,
-    private formBuilder: FormBuilder,
-   // @Inject('apiBase') private _apiBase: string
-
+    public dialog: MatDialog,
+    private fb: FormBuilder,
+    private translate:TranslateService
   ) {
-     translate.setDefaultLang('en');
-     translate.use('en');
-    this.loginFormErrors = {
-      username: {},
-      password: {}
+    this.data={
+      avatar:'luna',
+      speed:0.0
     };
-    // this.translatePipe=new TranslatePipe(translate,_cd);
-   //  console.log(this.translatePipe.transform('LOGIN.USERNAME'));
+    this.translate.addLangs(['en', 'zh']);
+    this.translate.setDefaultLang('en');
+    if(CookieStorage.hasCookie('lang')){
+      const lang = CookieStorage.getCookie('lang').value;
+      this.translate.use(lang);
+    }else{
+      const browserLang = translate.getBrowserLang();
+      this.translate.use(browserLang.match(/en|zh/) ?browserLang : 'en');
+    }
   }
-
+  setTranlate(lang){
+    const langCookie: Cookie = new Cookie();
+    langCookie.key = 'lang';
+    langCookie.value = lang;
+    langCookie.maxAge = 100;
+    langCookie.path = '/';
+    CookieStorage.addCookie(langCookie);
+    this.translate.use(lang);
+  }
   ngOnInit() {
     if (this.auth.isAuthenticated) {
       this._router.navigateByUrl(this.auth.defaultUrl);
     } else {
-      this.loginForm = this.formBuilder.group({
-        username: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(64)])],
-        password: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(32)])]
-      });
-      this.loginForm.valueChanges.subscribe(() => {
-        this.onLoginFormValuesChanged();
-      });
+      CWASA.init();
+      this.buildForm();
     }
   }
 
+  buildForm(): void {
+    this.form = this.fb.group({
+      'text': ['', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(10)
+      ]]
+    });
+  }
+
+  login(){
+    const dialogRef = this.dialog.open(LoginDialog, {
+      width: '650px'
+    });
+  }
+
+  setup(){
+    const dialogRef = this.dialog.open(SetupDialog, {
+      width: '650px',
+      data: this.data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.data.avatar=result.avatar;
+        this.data.speed=result.speed;
+        CWASA.init({
+          initAv:this.data.avatar,
+          speed:this.data.speed
+        });
+      }
+    });
+  }
 
   authenticated(): Observable<boolean> {
     if (this.authenticatedObs) {
@@ -105,67 +123,7 @@ export class LoginComponent implements OnInit {
     return this.authenticatedObs;
   }
 
-  langSelect(selected) {
-    const val = selected.value;
-   // const i18n=this._config.getSettings('i18n');
-    // i18n.currentLanguage=val;
-    this._loginService.getConfig().subscribe(result => {
-        //   i18n.languages= result.i18n.languages;
-          this.languages=result.i18n.languages;
-      },
-      error => {
-          this.errorDiagnostic = USER_STATUS_CODES[error.status] || USER_STATUS_CODES[500];
-      }
-    );
-   // this.i18nStore.dispatch(new LANGUAGE_ACTIONS.Init(val));
-    // this.i18nStore.dispatch(new LANGUAGE_ACTIONS.UseLanguage(val));
-  //  this.i18nStore.dispatch(new LANGUAGE_ACTIONS.LoadLanguage('login'));
-    this._router.navigate(['/login']);
-  }
-
-  onSubmit() {
-    this.submitted = true;
-    this.errorDiagnostic = null;
-
-    const usrPwd = this.loginForm.value.password;
-
-    const params = new URLSearchParams();
-    params.append('usrMail', this.loginForm.value.username);
-    params.append('usrPwd', usrPwd);
-
-    this._loginService.login(params).subscribe(data => {
-      if (data.success) {
-        this._router.initialNavigation();
-        this._router.navigate(['/home']);
-      } else {
-        this.submitted = false;
-        this.errorDiagnostic = data.message;
-      }
-    },
-      error => {
-        this.submitted = false;
-        this.errorDiagnostic = USER_STATUS_CODES[error.status] || USER_STATUS_CODES[500];
-      });
-  }
-  ngOnDestroy() {
-    if (this.loginServiceSub) {
-      this.loginServiceSub.unsubscribe();
-    }
-    if (this.authSub) {
-      this.authSub.unsubscribe();
-    }
-  }
-
-  onLoginFormValuesChanged() {
-    for (const field in this.loginFormErrors) {
-      if (!this.loginFormErrors.hasOwnProperty(field)) {
-        continue;
-      }
-      this.loginFormErrors[field] = {};
-      const control = this.loginForm.get(field);
-      if (control && control.dirty && !control.valid) {
-        this.loginFormErrors[field] = control.errors;
-      }
-    }
+  save(element: HTMLElement) {
+    console.log(this.form.value);
   }
 }

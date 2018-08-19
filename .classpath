@@ -105,5 +105,8 @@
 	<classpathentry kind="lib" path="F:/shouyu/lib/lib/jna-4.1.0.jar"/>
 	<classpathentry kind="lib" path="F:/shouyu/lib/lib/jna-4.4.0.jar"/>
 	<classpathentry kind="lib" path="F:/shouyu/lib/lib/jna-platform-4.4.0.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/exml-7.0.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="F:/shouyu/lib/commons-pool-1.4.jar"/>
 	<classpathentry kind="output" path="dist/classes"/>
 </classpath>

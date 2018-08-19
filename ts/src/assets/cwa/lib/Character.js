@@ -80,16 +80,11 @@
                 throw new Error("(Binary) Avatar version " + VER_3_DIG + " is not viable!");
             }
             this.scale = avdv.nextFloat();
-            console.log(this.scale +"!!!!!!");
             this.loadVolumeLimitsBin(avdv);
             this.setLengthScaleFactor();
 
             this.matRefl = avdv.nextVec3();
             this.skelYOffset = avdv.nextFloat();
-
-            console.log(this.matRefl);
-            console.log(this.skelYOffset);
-            console.log("****************************************");
 
             this.loadMeshesBin(avdv);
             this.loadInitPoseBin(avdv);
@@ -175,9 +170,6 @@
         Character.prototype.loadVolumeLimitsBin = function (avdv) {
             this.volMin = V3.fromVec(avdv.nextVec3());
             this.volMax = V3.fromVec(avdv.nextVec3());
-            console.log(this.volMin);
-            console.log(this.volMax);
-            console.log("++++++++++++++++++++++++++++++++++++++++++");
         };
         Character.prototype.loadMeshes = function (jsnchrctr) {
             this.meshes = jsnchrctr.meshes.map((function (_this) {

@@ -2,7 +2,7 @@
   <navigation-trigger></navigation-trigger>
 
   <div class="header__logo">
-    <h1><a [routerLink]="['']">手语翻译管理</a></h1>
+    <h1><a [routerLink]="['']">{{'HEADER.TITLE'| translate }}</a></h1>
   </div>
 
   <ul class="top-nav">
@@ -13,20 +13,24 @@
         <div class="row app-shortcuts">
           <a class="col-4 app-shortcuts__item" href="/home/dict">
             <i class="zmdi zmdi-calendar bg-red"></i>
-            <small class="">字典管理</small>
+            <small class="">{{'HEADER.DICTMGT'| translate }}</small>
           </a>
           <a class="col-4 app-shortcuts__item" href="/home/synonyms">
             <i class="zmdi zmdi-file-text bg-blue"></i>
-            <small class="">同义词管理</small>
+            <small class="">{{'HEADER.SYNONYMSMGT'| translate }}</small>
           </a>
           <a class="col-4 app-shortcuts__item"  href="/home/grammar">
             <i class="zmdi zmdi-email bg-teal"></i>
-            <small class="">语法管理</small>
+            <small class="">{{'HEADER.GRAMMARMGT'| translate }}</small>
           </a>
           <a class="col-4 app-shortcuts__item" href="/home/user">
             <i class="zmdi zmdi-view-headline bg-orange"></i>
-            <small class="">用户管理</small>
+            <small class=""> {{'HEADER.USERMGT'| translate }}</small>
           </a>
+          <span class="col-4 app-shortcuts__item"  (click)="logout()">
+            <i class="zmdi zmdi-sign-in bg-purple"></i>
+            <small class="">{{'HEADER.EXIT'| translate }}</small>
+          </span>
         </div>
       </div>
     </li>
@@ -36,7 +40,7 @@
 
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-menu--icon" role="menu">
         <div class="dropdown-item theme-switch">
-         样式选择
+          {{'HEADER.STYLE'| translate }}
           <div class="btn-group btn-group--colors mt-2 d-block">
             <label class="btn bg-green" [(ngModel)]="maThemeModel" btnRadio="green" uncheckable (click)="setTheme()"></label>
             <label class="btn bg-blue" [(ngModel)]="maThemeModel" btnRadio="blue" uncheckable (click)="setTheme()"></label>

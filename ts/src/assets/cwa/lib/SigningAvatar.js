@@ -98,8 +98,6 @@
             this.evtHandlers.animLoading();
             av = this.character.getName();
             txtarea = document.getElementById("JSONText");
-
-            console.log(theConfig.animgenProc +"========================");
             if (theConfig.animgenProc === "Client") {
                 this.avGUI.stat("SiGML Loading for " + av);
                 skipSign = 0;

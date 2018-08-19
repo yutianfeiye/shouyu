@@ -16,6 +16,10 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoryDialog } from './category-dialog';
 
+import { HttpClient } from '@angular/common/http';
+import {TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 
@@ -23,6 +27,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   wheelPropagation: true
 };
 
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 const routes: Routes = [
   { path: '', component: ItemInputComponent }
@@ -41,13 +49,19 @@ const routes: Routes = [
     MatTabsModule,
     MatSelectModule,
     MatTreeModule,
-    //  FancyImageUploaderModule,
     MatButtonModule,
     MatDividerModule,
     HttpModule,
     RoutingModule,
     MatDialogModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
   ],
   declarations: [ItemInputComponent, CategoryDialog],
   entryComponents: [

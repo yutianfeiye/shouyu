@@ -4,8 +4,8 @@
          <div class='left-title'>
           <mat-form-field>
             <mat-select [(value)]="lang" (selectionChange)='onSelect($event)'>
-              <mat-option value="zh_cn">中文</mat-option>
-              <mat-option value="en_us">美国英语</mat-option>
+                <mat-option value="zh_cn">{{'COMMON.CHINESE'| translate }}</mat-option>
+                <mat-option value="en_us">{{'COMMON.ENGLISH'| translate }}</mat-option>
             </mat-select>
         </mat-form-field>
         </div>
@@ -47,19 +47,19 @@
         <div fxLayout="row" class='rows'>
           <div fxFlex="50" fxLayout="row">
             <mat-form-field fxFlexFill>
-              <input matInput placeholder="单词" formControlName="word">
+              <input matInput placeholder="{{'DICTIONARY.WORD'| translate }}" formControlName="word">
             </mat-form-field>
           </div>
           <div fxFlex="50" fxLayout="row">
             <mat-form-field fxFlexFill>
-              <input matInput placeholder="拼音" formControlName="pinyin">
+              <input matInput placeholder="{{'DICTIONARY.PINYIN'| translate }}" formControlName="pinyin">
             </mat-form-field>
           </div>
         </div>
         <div fxLayout="row" fxLayoutAlign="start end" style='height:150px' class='rows'>
           <div fxFlex="100" fxLayout="row">
             <mat-form-field fxFlexFill>
-              <textarea matInput placeholder="描述" formControlName="description" matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
+              <textarea matInput placeholder="{{'DICTIONARY.DESCRIPTION'| translate }}" formControlName="description" matTextareaAutosize='true' cdkAutosizeMaxRows="6" cdkAutosizeMinRows="3"></textarea>
             </mat-form-field>
           </div>
           <!-- <div fxFlex="50" fxLayout="row">
@@ -69,13 +69,13 @@
         <div fxLayout="row" class='rows'>
           <div fxFlex="100" fxLayout="row">
             <mat-form-field fxFlexFill>
-              <input #hansField  matInput placeholder="手势" class="ham" name="hamnosys" formControlName="hamnosys">
+              <input #hansField  matInput placeholder="{{'DICTIONARY.HAMNOSYS'| translate }}" class="ham" name="hamnosys" formControlName="hamnosys">
             </mat-form-field>
           </div>
         </div>
       </form>
       <mat-tab-group fxFlexFill>
-        <mat-tab label="手型">  
+        <mat-tab label="{{'DICTIONARY.HANDSHAPE'| translate }}">  
           <div id="keyboard_hsh">
             <table>
               <tr>
@@ -184,7 +184,7 @@
             </table>
           </div>
         </mat-tab>
-        <mat-tab label="方向">
+        <mat-tab label="{{'DICTIONARY.OREINTATION'| translate }}">
           <div id="keyboard_ori">
             <table>
               <tr>
@@ -345,7 +345,7 @@
             </table>
           </div>
         </mat-tab>
-        <mat-tab label="位置">
+        <mat-tab label="{{'DICTIONARY.POSITION'| translate }}">
           <div id="keyboard_loc">
             <table>
               <tr>
@@ -523,7 +523,7 @@
             </table>
           </div>
         </mat-tab>
-        <mat-tab label="动作1">
+        <mat-tab label="{{'DICTIONARY.MOVEMENT1'| translate }}">
           <div id="keyboard_mov1">
             <table>
               <tr>
@@ -732,7 +732,7 @@
             </table>
           </div>
         </mat-tab>
-        <mat-tab label="动作2">
+        <mat-tab label="{{'DICTIONARY.MOVEMENT2'| translate }}">
           <div id="keyboard_mov2">
             <table>
               <tr>
@@ -916,7 +916,7 @@
             </table>
           </div>
         </mat-tab>
-        <mat-tab label="双手">
+        <mat-tab label="{{'DICTIONARY.TWOHANDS'| translate }}">
           <div id="keyboard_2hd">
             <table>
               <tr>

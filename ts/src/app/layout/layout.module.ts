@@ -14,6 +14,16 @@ import { HeaderComponent } from './header/header.component';
 import { NavigationTriggerComponent } from './header/navigation-trigger/navigation-trigger.component';
 import { SharedService } from '../shared/services/shared.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {LayoutService} from './layout.service';
+
+import {TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -32,10 +42,18 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
     ButtonsModule.forRoot(),
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     SharedService,
+    LayoutService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy

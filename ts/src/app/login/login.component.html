@@ -1,41 +1,30 @@
-<div id="login" fxLayout="column" perfectScrollbar>
-    <div id="login-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
-        <div id="login-form"  [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}">
-            <div *ngIf="logo!=''" >
-                <img src='{{logo}}' style="display:block; margin-left: auto; margin-right: auto;"  height="99" width="488">
-            </div>
-            <div  *ngIf="logo==''" class="title">{{title}}</div>
-
-            <form *ngIf="!submitted" [formGroup]="loginForm" (ngSubmit)="onSubmit()"  novalidate>
-                <mat-form-field>
-                    <input matInput placeholder="{{'LOGIN.USERNAME'| translate }}" formControlName="username"  autocomplete="new-password">
-                    <mat-error *ngIf="loginFormErrors.username.required">
-                          {{'LOGIN.EmailRequired'| translate }}
-                    </mat-error>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput required type="password"
-                    placeholder="{{'LOGIN.PASSWORD'| translate }}"
-                    formControlName="password"
-                    autocomplete="new-password">
-                    <mat-error *ngIf="loginFormErrors.password.required">
-                          {{'LOGIN.PasswordRequired'| translate }}
-                    </mat-error>
-                </mat-form-field>
-                <div class="remember-forgot-password" fxLayout="row" fxLayout.xs="column"
-                     fxLayoutAlign="space-between center">
-                    <mat-checkbox class="remember-me" aria-label="Remember Me">
-                        {{'LOGIN.REMEMBERME'| translate }}
-                    </mat-checkbox>
-                </div>
-                <button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
-                        [disabled]="loginForm.invalid">
-                        {{'LOGIN.LOGIN'| translate }}
-                </button>
-            </form>
-            <mat-spinner *ngIf="submitted" mode="indeterminate"></mat-spinner>
-            <p class="error" *ngIf="errorDiagnostic">{{errorDiagnostic}}</p>
-
-        </div>
+<div id="login" fxLayout="column" style="overflow:hidden">
+    <div class="top-button">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="login()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>{{'LOGIN.LOGIN'| translate }}</span>
+        </button>
+        <button mat-menu-item (click)="setup()">
+                <mat-icon>settings</mat-icon>
+                <span>{{'LOGIN.Setup'| translate }}</span>
+        </button>
+        <button mat-menu-item [matMenuTriggerFor]="language">
+            <mat-icon>public</mat-icon>
+            <span>{{'COMMON.LANGUAGE'| translate }}</span>
+        </button>
+        </mat-menu>
+        <mat-menu #language="matMenu">
+                <button mat-menu-item (click)="setTranlate('zh')">{{'COMMON.CHINESE'| translate }}</button>
+                <button mat-menu-item (click)="setTranlate('en')">{{'COMMON.ENGLISH'| translate }}</button>
+        </mat-menu>
     </div>
+    <div class="CWASAPanel av0" align="center"  style="flex:1"></div>
+    <div style="text-align:center;">
+            <speech2text [props]='props'></speech2text>
+     </div> 
 </div>
+     

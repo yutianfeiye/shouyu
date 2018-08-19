@@ -3,7 +3,6 @@ import { LayoutComponent } from './layout.component';
 
 const LAYOUT_ROUTES: Routes = [
     { path: '', component: LayoutComponent, children: [
-        // Home
         { path: '', redirectTo: 'dict', pathMatch: 'full' },
         { path: 'dict', loadChildren: '../dictionary/item-input.module#ItemInputModule' },
         { path: 'synonyms', loadChildren: '../synonyms/synonyms.module#SynonymsModule' },

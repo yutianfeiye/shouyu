@@ -30,14 +30,16 @@ h3, h4 {
 
 .divAv {
 	text-align: center;
-	position: relative; background: #A3B8D2;
+	position: relative;
+	 background: #24282d;
 	width: 100%; height: 100%;
 	margin: 0px; border: 1px solid; padding: 0px;
 }
 
 .CWASAAvatar {
 	text-align: center;
-	position: relative; background: #A3B8D2;
+	position: relative; 
+	background: #24282d;
 	width: 100%; height: 100%;
 	margin: 0px; border: 0px; padding: 0px;
 }

@@ -205,7 +205,6 @@
             } else {
                 gotXSLT = (function (_this) {
                     return function () {
-                        console.log('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF');
                         return theCB(_this._parseSiGML(res.sigDoc));
                     };
                 })(this);

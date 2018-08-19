@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>{{'LOGIN.Setup'| translate }}</h1>
+<div mat-dialog-content>
+  <div fxLayout="column" >
+      <mat-form-field  fxFlexFill>
+          <mat-select placeholder="{{'LOGIN.AVATAR'| translate }}" [(ngModel)]="data.avatar" >
+            <mat-option value="luna">luna</mat-option>
+            <mat-option value="marc">marc</mat-option>
+            <mat-option value="max">max</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <h6>{{'LOGIN.SPEED'| translate }}</h6>
+      <mat-slider
+            class="example-margin"
+            [disabled]="false"
+            [invert]="false"
+            [max]="3.0"
+            [min]="-3.0"
+            [step]="0.5"
+            [thumbLabel]="true"
+            [tickInterval]="tickInterval"
+            [(ngModel)]="data.speed"
+            [vertical]="false">
+      </mat-slider>
+    </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">{{'LOGIN.Cancel'| translate }}</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>{{'LOGIN.Confirm'| translate }}</button>
+</div>

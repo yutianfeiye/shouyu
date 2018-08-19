@@ -310,8 +310,7 @@ public class LoadDictionary  {
 		String sql="select id,name from category_base";
 		String [][] categories=con.query(sql);
 
-	//	for(int i=0;i<categories.length;i++){
-		for(int i=20;i<categories.length;i++){
+		for(int i=0;i<categories.length;i++){
 			ArrayList<Object[]> result=new ArrayList<Object[]>();
 			ST.getAllDictionnary(categories[i][0],categories[i][1].trim(),result);
 			Object[][] dict=new Object[result.size()][6];
@@ -321,17 +320,5 @@ public class LoadDictionary  {
 				con.execLarge("insert into word_base (word,pinyin,categery,lang,description,image) VALUES (?,?,?,?,?,?) ",dict[k]);
 			}
 		}
-
-	    
-//		try {
-//			ArrayList<String> categories=ST.getList("http://www.xkrjy.com/sy/mulu.php");
-//			con.exec("delete from cetegory_base ",new String[]{});
-//			for(int i=0;i<categories.size();i++){
-//				String category=categories.get(i);
-//				con.exec("insert into cetegory_base (name) VALUES (?) ",new String[]{category});
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
 	}
 }

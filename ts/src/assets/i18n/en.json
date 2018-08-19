@@ -1,0 +1,78 @@
+{
+  "LOGIN": {
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "PASSWORD":"Password",
+    "USERNAME":"User Name",
+    "LANGUAGE":"Langguage",
+    "REMEMBERME":"Remember Me",
+    "FORGOTPASSWORD":"Forgot Password",
+    "NOACCOUNT":" Don't have an account",
+    "EmailRequired":" Email is required",
+    "PasswordRequired":"Password is required",
+    "CREATEACCOUNT":"Create an account",
+    "Setup":"Setup",
+    "TITLE":"Sign Language Management System",
+    "AVATAR":"Avatar",
+    "SPEED":"Play Speed",
+    "Cancel":"Cancel",
+    "Confirm":"OK"
+  },
+  "COMMON": {
+    "DELETE":"Delete",
+    "UPDATE":"Update",
+    "SAVE":"Save",
+    "CANCEL":"Cancel",
+    "LANGUAGE":"Language",
+    "CHINESE":"Chinese",
+    "ENGLISH":"English"
+  },
+  "HEADER": {
+    "TITLE":"Sign Language Management System",
+    "EXIT":"Exit",
+    "USERMGT":"User Mgt.",
+    "GRAMMARMGT":"Grammar Mgt.",
+    "SYNONYMSMGT":"Synonyms Mgt.",
+    "DICTMGT":"Dictionary Mgt.",
+    "STYLE":" Style"
+  },
+  "USER": {
+    "USERNAME":"User Name",
+    "REALNAME":"Real Name",
+    "PASSWORD":"Password",
+    "OPERATION":"Operation",
+    "SAVE":"Save",
+    "CANCEL":"Cancel",
+    "DELETE":"Delete",
+    "UPDATE":"Update",
+    "USERMGT":"User Management",
+    "NODATA":" No Data to Show"
+  },
+  "GRAMMAR": {
+    "LANGUAGE":"Language",
+    "CHINESE":"Chinese",
+    "ENGLISH":"English",
+    "NL_GRAMMAR":"Natural Language Grammar",
+    "SL_GRAMMAR":"Sign Language Gramma",
+    "GRAMMARMGT":"Grammar Mapping Management"
+  },
+  "SYNOMYMS": {
+    "LANGUAGE":"Language",
+    "SYNOMYMS":"Synomyms",
+    "SYNOMYMSMGT":"Synomyms Management"
+  },
+  "DICTIONARY": {
+    "CATEGORY":"Category",
+    "CATEGORY_NAME":"Category Name",
+    "WORD":"Word",
+    "PINYIN":"Pinyin",
+    "DESCRIPTION":"Description",
+    "HAMNOSYS":"Gesture",
+    "HANDSHAPE":"Hand Shape",
+    "OREINTATION":"Orientation",
+    "POSITION":"Postion",
+    "MOVEMENT1":"Movement1",
+    "MOVEMENT2":"Movement2",
+    "TWOHANDS":"Two Hands"
+  }
+}

@@ -24,6 +24,15 @@ const routes: Routes = [
     }
   },
   {
+    path: '',
+    component: LoginComponent,
+    data: {
+      meta: {
+        title: '智能手语翻译系统'
+      }
+    }
+  },
+  {
     path: '**',
     redirectTo: 'login',
     pathMatch: 'full'

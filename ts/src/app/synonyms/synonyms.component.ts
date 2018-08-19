@@ -8,9 +8,10 @@ import {MatTreeFlatDataSource, MatTreeFlattener , MatTreeNode} from '@angular/ma
 import 'rxjs/Rx';
 // tslint:disable-next-line:import-blacklist
 import {BehaviorSubject, Observable, of as observableOf} from 'rxjs';
-import { PerfectScrollbarConfigInterface, PerfectScrollbarComponent, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import {MatDialog} from '@angular/material';
+import {TranslateService} from '@ngx-translate/core';
+import { Cookie,CookieStorage} from '../../lib/cookie';
 import {SynonymsDialog} from './synonyms.dialog';
 import {SynonymsService} from './synonyms.service';
 
@@ -69,7 +70,7 @@ export class FileDatabase {
 
   sigml='';
 
-  constructor( private http: Http) {
+  constructor( private http: Http ) {
     this.initialize();
   }
 
@@ -166,7 +167,17 @@ export class SynonymsComponent {
   constructor(private database: FileDatabase ,
      private renderer: Renderer2,
       private _synonymsService: SynonymsService,
-      public dialog: MatDialog) {
+      public dialog: MatDialog ,
+       public translate:TranslateService) {
+       this.translate.addLangs(['en', 'zh']);
+       this.translate.setDefaultLang('en');
+      if(CookieStorage.hasCookie('lang')){
+        const lang = CookieStorage.getCookie('lang').value;
+        this.translate.use(lang);
+      }else{
+        const browserLang = translate.getBrowserLang();
+        this.translate.use(browserLang.match(/en|zh/) ?browserLang : 'en');
+      }
       this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel,
       this._isExpandable, this._getChildren);
       this.treeControl = new FlatTreeControl<DictionaryFlatNode>(this._getLevel, this._isExpandable);
@@ -241,9 +252,9 @@ export class SynonymsComponent {
       this.data=[];
     } else {
       const params={};
-      params['id']=e.id;
+      params['name']=e.name;
       this.category=e.parent;
-      this.wordId=e.id;
+      this.wordId=e.name;
       this.listSynonyms(this.wordId).subscribe(data => {
         this.data=data;
       });
@@ -265,7 +276,7 @@ export class SynonymsComponent {
         result['type']='save';
         result['word']= this.wordId;
         this.postSynonyms(result).subscribe(res => {
-           if (res.success) {
+           if (res['success']) {
             this.loadData();
            }
         });
@@ -306,7 +317,7 @@ export class SynonymsComponent {
 
   deleteSynonym(id){
     this._synonymsService.deleteSynonyms(id).subscribe(res => {
-      if (res.success) {
+      if (res['success']) {
         this.loadData();
       } else {
         console.log(res['message']);

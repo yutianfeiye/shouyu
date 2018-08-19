@@ -19,7 +19,6 @@
     theSToCA = cwaenv.get("theSToCA");
     theConfig = Config.theConfig;
 
-    console.log("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
     AvatarGUI = (function () {
         function AvatarGUI(avIndex, avSettings) {
             var allDiv, avEvtHandlers, avaDiv, div, htmlgen, i, j, k, l, len, len1, len2, len3, len4, len5, len6, len7, len8, len9, m, n, o, p, q, r, ref, ref1, speedFun, theDivs;
@@ -38,73 +37,24 @@
             if ((ref1 = avaDiv[0]) != null) {
                 ref1.innerHTML = htmlgen.htmlForAv();
             }
-            theDivs = document.getElementsByClassName("CWASAGUI av" + this.avIndex);
-            for (i = 0, len = theDivs.length; i < len; i++) {
-                div = theDivs[i];
-                div.innerHTML = htmlgen.htmlForGUI();
-            }
-            theDivs = document.getElementsByClassName("CWASAAvMenu av" + this.avIndex);
-            for (j = 0, len1 = theDivs.length; j < len1; j++) {
-                div = theDivs[j];
-                div.innerHTML = htmlgen.htmlForAvMenu();
-            }
-            theDivs = document.getElementsByClassName("CWASASpeed av" + this.avIndex);
-            for (k = 0, len2 = theDivs.length; k < len2; k++) {
-                div = theDivs[k];
-                div.innerHTML = htmlgen.htmlForSpeedCtrl();
-            }
-            theDivs = document.getElementsByClassName("CWASASiGMLURL av" + this.avIndex);
-            for (l = 0, len3 = theDivs.length; l < len3; l++) {
-                div = theDivs[l];
-                div.innerHTML = htmlgen.htmlForSiGMLURL();
-            }
-            theDivs = document.getElementsByClassName("CWASASiGMLText av" + this.avIndex);
-            for (m = 0, len4 = theDivs.length; m < len4; m++) {
-                div = theDivs[m];
-                div.innerHTML = htmlgen.htmlForSiGMLText();
-            }
-            theDivs = document.getElementsByClassName("CWASAPlay av" + this.avIndex);
-            for (n = 0, len5 = theDivs.length; n < len5; n++) {
-                div = theDivs[n];
-                div.innerHTML = htmlgen.htmlForSiGMLPlay();
-            }
-            theDivs = document.getElementsByClassName("CWASAPlayExtra av" + this.avIndex);
-            for (o = 0, len6 = theDivs.length; o < len6; o++) {
-                div = theDivs[o];
-                div.innerHTML = htmlgen.htmlForSiGMLPlayExtra();
-            }
-            theDivs = document.getElementsByClassName("CWASAFrames av" + this.avIndex);
-            for (p = 0, len7 = theDivs.length; p < len7; p++) {
-                div = theDivs[p];
-                div.innerHTML = htmlgen.htmlForFrameSteps();
-            }
-            theDivs = document.getElementsByClassName("CWASAProgress av" + this.avIndex);
-            for (q = 0, len8 = theDivs.length; q < len8; q++) {
-                div = theDivs[q];
-                div.innerHTML = htmlgen.htmlForProgress();
-            }
-            theDivs = document.getElementsByClassName("CWASAStatus av" + this.avIndex);
-            for (r = 0, len9 = theDivs.length; r < len9; r++) {
-                div = theDivs[r];
-                div.innerHTML = htmlgen.htmlForStatus();
-            }
             this.domEls = this._getDOMEls();
-            this.guiDisablePlay();
+           // this.guiDisablePlay();
             avEvtHandlers = {
                 fps: this.avEvtFPS.bind(this),
                 atFrame: this.avEvtAtFrame.bind(this),
                 avLoadStarts: this.avEvtLoadStarts.bind(this),
                 avLoadDone: this.avEvtLoadDone.bind(this),
                 animLoading: this.avEvtSiGMLLoading.bind(this),
-                animActive: this.avEvtAnimActive.bind(this),
-                animIdle: this.avEvtAnimIdle.bind(this)
+				animActive: this.avEvtAnimActive.bind(this),
+				animIdle: this.avEvtAnimIdle.bind(this)
             };
-            this.speedController = new AvSpeedController(this.domEls, true);
-            speedFun = ((function (_this) {
-                return function () {
-                    return _this.speedController.curSpeed();
-                };
-            })(this));
+			var speedFun=function(){
+				var speed=1.0
+				if(avSettings['speed']){
+					speed=avSettings['speed'];
+				}
+				return  Math.pow(2,speed/ 2);
+			};
             this.avatar = new SigningAvatar(this, this.domEls.avCanvas[0], speedFun, avEvtHandlers);
         }
         AvatarGUI.prototype.stat = function (msg) {
@@ -152,12 +102,16 @@
             return this.avatar.stopPlay();
         };
         AvatarGUI.prototype.suspendPlay = function () {
-            this.guiSuspendPlay();
             return this.avatar.suspendPlay();
         };
         AvatarGUI.prototype.resumePlay = function () {
-            this.guiStartPlay();
             return this.avatar.resumePlay();
+        };
+		AvatarGUI.prototype.avEvtAnimActive = function () {
+            return true;
+        };
+        AvatarGUI.prototype.avEvtAnimIdle = function () {
+            return true;
         };
         AvatarGUI.prototype.showPreviousFrame = function () {
             return this.avatar.showPreviousFrame();
@@ -205,111 +159,34 @@
             return results;
         };
         AvatarGUI.prototype.avEvtFPS = function (newfps) {
-            return this._setElsValue(this.domEls.fps, "" + (newfps.toFixed(2)));
+            //return this._setElsValue(this.domEls.fps, "" + (newfps.toFixed(2)));
         };
         AvatarGUI.prototype.avEvtAtFrame = function (gloss, s, f, isDone) {
             if (s !== this._sIndex || f !== this._fIndex || isDone) {
-                this._setElsValue(this.domEls.signAndFrame, s + "/" + f);
-                this._fIndex = f;
-                if (s !== this._sIndex) {
-                    this._setElsValue(this.domEls.gloss, "" + gloss);
-                    return this._sIndex = s;
-                }
+             //   this._setElsValue(this.domEls.signAndFrame, s + "/" + f);
+             //   this._fIndex = f;
+            //    if (s !== this._sIndex) {
+            //        this._setElsValue(this.domEls.gloss, "" + gloss);
+            //        return this._sIndex = s;
+            //    }
             }
         };
         AvatarGUI.prototype.avEvtLoadStarts = function (av) {
-            this._setElsValue(this.domEls.avMenu, av);
-            return this.guiDisablePlay();
+
         };
         AvatarGUI.prototype.avEvtLoadDone = function (av) {
-            this._setElsValue(this.domEls.avMenu, av);
-            return this.guiStopPlay();
+           
         };
         AvatarGUI.prototype.avEvtSiGMLLoading = function () {
-            return this.guiDisablePlay();
+         
         };
-        AvatarGUI.prototype.avEvtAnimActive = function () {
-            return this.guiStartPlay();
-        };
-        AvatarGUI.prototype.avEvtAnimIdle = function () {
-            return this.guiStopPlay();
-        };
+ 
         AvatarGUI.prototype.initGUI = function () {
             var avm, avmenu, i, len, textsu;
             this.nSFD = 0;
-            this._setElsOnclick(this.domEls.stop, this.stopPlay.bind(this));
-            this._setElsOnclick(this.domEls.suspend, this.suspendPlay.bind(this));
-            this._setElsOnclick(this.domEls.resume, this.resumePlay.bind(this));
-            this._setElsOnclick(this.domEls.playSU, ((function (_this) {
-                return function () {
-                    return _this.playSiGMLURLFromEl(_this.domEls.sigmlURL);
-                };
-            })(this)));
-            this._setElsOnclick(this.domEls.playST, ((function (_this) {
-                return function () {
-                    return _this.playSiGMLTextFromEl(_this.domEls.sigmlText);
-                };
-            })(this)));
-            this._setElsOnclick(this.domEls.prevF, this.showPreviousFrame.bind(this));
-            this._setElsOnclick(this.domEls.nextF, this.showNextFrame.bind(this));
-            avmenu = this.domEls.avMenu;
-            for (i = 0, len = avmenu.length; i < len; i++) {
-                avm = avmenu[i];
-                avm.onchange = ((function (_this) {
-                    return function (mnu) {
-                        return function () {
-                            return _this.avatar.switchAvatar(mnu.value);
-                        };
-                    };
-                })(this))(avm);
-            }
-            textsu = this.domEls.sigmlURL[0];
-            return textsu != null ? textsu.onkeypress = ((function (_this) {
-                return function (evt) {
-                    return _this.handleURLKey(evt);
-                };
-            })(this)) : void 0;
+            return  void 0;
         };
-        AvatarGUI.prototype.guiDisablePlay = function () {
-            this._setElsDisabled(this.domEls.avMenu, true);
-            this._setElsDisabled(this.domEls.playSU, true);
-            this._setElsDisabled(this.domEls.playST, true);
-            this._setElsDisabled(this.domEls.stop, true);
-            this._setElsDisabled(this.domEls.suspend, true);
-            this._setElsDisabled(this.domEls.resume, true);
-            this._setElsDisabled(this.domEls.prevF, true);
-            return this._setElsDisabled(this.domEls.nextF, true);
-        };
-        AvatarGUI.prototype.guiStartPlay = function () {
-            this._setElsDisabled(this.domEls.avMenu, true);
-            this._setElsDisabled(this.domEls.playSU, true);
-            this._setElsDisabled(this.domEls.playST, true);
-            this._setElsDisabled(this.domEls.stop, false);
-            this._setElsDisabled(this.domEls.suspend, false);
-            this._setElsDisabled(this.domEls.resume, true);
-            this._setElsDisabled(this.domEls.prevF, true);
-            return this._setElsDisabled(this.domEls.nextF, true);
-        };
-        AvatarGUI.prototype.guiStopPlay = function () {
-            this._setElsDisabled(this.domEls.avMenu, false);
-            this._setElsDisabled(this.domEls.playSU, false);
-            this._setElsDisabled(this.domEls.playST, false);
-            this._setElsDisabled(this.domEls.stop, true);
-            this._setElsDisabled(this.domEls.suspend, true);
-            this._setElsDisabled(this.domEls.resume, true);
-            this._setElsDisabled(this.domEls.prevF, true);
-            return this._setElsDisabled(this.domEls.nextF, true);
-        };
-        AvatarGUI.prototype.guiSuspendPlay = function () {
-            this._setElsDisabled(this.domEls.avMenu, true);
-            this._setElsDisabled(this.domEls.playSU, true);
-            this._setElsDisabled(this.domEls.playST, true);
-            this._setElsDisabled(this.domEls.stop, false);
-            this._setElsDisabled(this.domEls.suspend, true);
-            this._setElsDisabled(this.domEls.resume, false);
-            this._setElsDisabled(this.domEls.prevF, false);
-            return this._setElsDisabled(this.domEls.nextF, false);
-        };
+
         AvatarGUI.prototype._getDOMEls = function () {
             var avix, bttnForAv, domels, elForAv, txtForAv, txtaForAv;
             avix = this.avIndex;
@@ -333,24 +210,7 @@
                 return elForAv("txta" + tatag);
             };
             return domels = {
-                avCanvas: elForAv("canvasAv"),
-                avMenu: elForAv("menuAv"),
-                playSU: bttnForAv("PlaySiGMLURL"),
-                playST: bttnForAv("PlaySiGMLText"),
-                stop: bttnForAv("Stop"),
-                suspend: bttnForAv("Suspend"),
-                resume: bttnForAv("Resume"),
-                prevF: bttnForAv("PrevF"),
-                nextF: bttnForAv("NextF"),
-                speedDisplay: txtForAv("LogSpeed"),
-                speedDown: bttnForAv("SpeedDown"),
-                speedUp: bttnForAv("SpeedUp"),
-                speedReset: bttnForAv("SpeedReset"),
-                signAndFrame: txtForAv("SF"),
-                gloss: txtForAv("Gloss"),
-                fps: txtForAv("FPS"),
-                sigmlURL: txtForAv("SiGMLURL"),
-                sigmlText: txtaForAv("SiGMLText")
+                avCanvas: elForAv("canvasAv")
             };
         };
         return AvatarGUI;
