@@ -36,7 +36,7 @@ public class SynonymsService {
 		
 		try {
 			Connection con=jacper.getConnection("shouyu");
-			
+			//列出所有同义词
 			String sql0="select id,synonyms from synonyms_base where word=?";
 			String [][] users=con.get(sql0,new String[]{word});
 			for(int i=0;i<users.length;i++){
@@ -57,7 +57,7 @@ public class SynonymsService {
 
 		String id=jacper.getString("id","0");
 		String type=jacper.getString("type","get");
-		
+		//找一个同义词
 		JSONObject resultJSON = new JSONObject();
 		try {
 			Connection con=jacper.getConnection("shouyu");
@@ -68,6 +68,8 @@ public class SynonymsService {
 				resultJSON.put("word", synonyms[1]);
 				resultJSON.put("synonyms",synonyms[2]);
 			}else{
+				
+		//删除
 				String sql0="delete from synonyms_base where id=?";
 				con.exec(sql0,new String[]{id});
 				resultJSON.put("success", true);
@@ -92,10 +94,13 @@ public class SynonymsService {
 			String synonyms=jacper.getStr("synonyms");
 			
 			if(type.equals("save")){
+			
+				//插入新的同义词
 				String sql0="INSERT INTO synonyms_base (word,synonyms) values (?,?)";
 				con.exec(sql0,new String[]{word,synonyms});
 				resultJSON.put("success", true);
 			}else{
+				//更新
 				String id=jacper.getString("id","0");
 				String sql0="update synonyms_base set word=?,synonyms=? where id=?";
 				con.exec(sql0,new String[]{word,synonyms,id});

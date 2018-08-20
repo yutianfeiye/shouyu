@@ -26,15 +26,9 @@ import org.springframework.web.context.ServletContextAware;
 @RestController
 public class LoginService implements ServletConfigAware,ServletContextAware{
 	
-	 private static final String TGC_ID = "CASTGC";
 	 private static final String PRIVACY_ID = "CASPRIVACY";
 
-	 private GrantorCache tgcCache;
-	 private ServiceTicketCache stCache;
-	 private LoginTicketCache ltCache;
-
-	// private String loginForm;
-	 private String serviceSuccess,confirmService, redirect;
+	 private String serviceSuccess,confirmService;
 	 private ServletContext app;
 	
 	 @Override
@@ -44,14 +38,10 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 	 @Override  
 	 public void setServletConfig(ServletConfig config) {
 		app = config.getServletContext();
-		tgcCache = (GrantorCache) app.getAttribute("tgcCache");
-		stCache = (ServiceTicketCache) app.getAttribute("stCache");
-		ltCache = (LoginTicketCache) app.getAttribute("ltCache");
 		serviceSuccess = (String) KingleSystem.getSSOProperty("serviceSuccess");
 		confirmService = (String) KingleSystem.getSSOProperty("confirmService");
-		redirect =(String) KingleSystem.getSSOProperty("redirect"); 
 	}
-	 
+
 	@RequestMapping(value="/login",method = RequestMethod.GET)
 	public String checkLogin(Jacper jacper) {
 		KingleSession session = null;
@@ -88,7 +78,6 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 		response.setDateHeader("Expires",-1);
 
 		try {
-			Cookie[] cookies = request.getCookies();
 			String userId=this.authenticate(jacper,email,pwd);
 			if (!userId.equals("")){
 				  session.invalidate();
@@ -148,13 +137,6 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 		return userId;
 	}
 	
-	private void destroyTgc(HttpServletRequest request,HttpServletResponse response){
-			Cookie tgcOverwrite = new Cookie(TGC_ID, "destroyed");
-			tgcOverwrite.setPath(request.getContextPath());
-			tgcOverwrite.setMaxAge(0);
-			tgcOverwrite.setSecure(true);
-			response.addCookie(tgcOverwrite);
-    }
 	private String grantForService(Jacper jacper,String serviceId,boolean first,String userId){
 		  	HttpServletRequest request = jacper.getRequest();
 			HttpServletResponse response = jacper.getResponse();  
@@ -183,21 +165,7 @@ public class LoginService implements ServletConfigAware,ServletContextAware{
 		    }
 		    return resultJSON.toString();
 	}
-    private TicketGrantingTicket sendTgc(String username,HttpServletRequest request,HttpServletResponse response){
-			try {
-			  TicketGrantingTicket t = new TicketGrantingTicket(username);
-			  String token = tgcCache.addTicket(t);
-			  Cookie tgc = new Cookie(TGC_ID, token);
-			  tgc.setSecure(true);
-			  tgc.setMaxAge(-1);
-			  tgc.setPath("/");
-			  response.addCookie(tgc);
-			  return t;
-			} catch (TicketException ex) {
-			  ex.printStackTrace();
-			  return null;
-			}
-   }
+ 
   private void sendPrivacyCookie(HttpServletRequest request, HttpServletResponse response){
 	    if (request.getParameter("warn") != null) {
 	      Cookie privacy = new Cookie(PRIVACY_ID, "enabled");

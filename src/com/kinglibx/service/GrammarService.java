@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController 
 public class GrammarService {
-
+	
+// 生成列表
 	@RequestMapping(value="/dictionary/listGrammar",method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	public String listGrammar(Jacper jacper) {
 		
@@ -40,6 +41,8 @@ public class GrammarService {
 		return resultJSON.toString();
 	}
 	
+	//取一个grammar
+	
 	@RequestMapping(value="/dictionary/getGrammar",method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	public String getGrammar(Jacper jacper) {
 
@@ -60,7 +63,7 @@ public class GrammarService {
 				resultJSON.put("nl_grammar",grammars[2]);
 				resultJSON.put("sl_grammer",grammars[3]);
 
-				
+			//删除	
 			}else{
 				String sql0="delete from grammar_base where id=?";
 				con.exec(sql0,new String[]{id});
@@ -73,6 +76,8 @@ public class GrammarService {
 		return resultJSON.toString();
 	}
 	
+	
+	//新建和更新
 	@RequestMapping(value="/dictionary/postGrammar",method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	public String postSynonym(Jacper jacper) {
 
@@ -90,7 +95,10 @@ public class GrammarService {
 				String sql0="INSERT INTO grammar_base (lang,nl_grammar,sl_grammer) values (?,?,?)";
 				con.exec(sql0,new String[]{lang,nl_grammar,sl_grammer});
 				resultJSON.put("success", true);
+				
 			}else{
+				//更新
+				
 				String id=jacper.getString("id","0");
 				String sql0="update grammar_base set lang=?,nl_grammar=?,sl_grammer=? where id=?";
 				con.exec(sql0,new String[]{lang,nl_grammar,sl_grammer,id});

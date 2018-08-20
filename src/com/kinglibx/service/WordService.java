@@ -54,6 +54,8 @@ public class WordService {
 			Connection con=jacper.getConnection("shouyu");
 			if(type.equals("get")){
 				JSONObject itemJSON = new JSONObject(); 
+
+				
 				String sql0="select id,category,word,lang,pinyin,description,hamnosys,sigml from word_base where id=?";
 				String [] word=con.getRow(sql0,new String[]{id});
 				itemJSON.put("id", word[0]);
@@ -71,6 +73,7 @@ public class WordService {
 				
 				resultJSON.put("result", itemJSON);
 				resultJSON.put("success", true);
+				
 			}else{
 				String sql0="delete from word_base where id=?";
 				con.exec(sql0,new String[]{id});
@@ -98,6 +101,7 @@ public class WordService {
 			String description=jacper.getStr("description");
 			String hamnosys=jacper.getStr("hamnosys");
 			
+			//把汉堡编码转成sigml
 			String[] hnssigml = sigmlFromHNSUItems(new String[]{hamnosys});
 			String sigml=joinLines(indentXML(hnssigml));
 			
@@ -120,42 +124,42 @@ public class WordService {
 		return resultJSON.toString();
 	}
 	
-	@RequestMapping(value="/dictionary/image",method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
-	public void getImage(Jacper jacper) {
-		try {
-				
-			Connection con=jacper.getConnection("shouyu");
-			HttpServletResponse res = jacper.getResponse();
-			
-			String id=jacper.getStr("id");
-			
-			String fileName="";
-			String ContentType="";
-			try{
-				Statement stmt = con.createStatement();
-				String sql0="select image from word_base where id='"+id+"'";
-				ResultSet rs = stmt.executeQuery(sql0);
-				rs.next();
-				ContentType = rs.getString(1);
-				fileName = rs.getString(2);
-				InputStream dis = rs.getBinaryStream(3);
-				try {
-					fileName=new String(fileName.getBytes("GBK"),"8859_1");
-				}catch(Exception se){}
-				res.setContentType(ContentType);
-				res.setHeader("Content-Disposition","attachment;filename="+fileName);
-				Files.copyRange(dis,res.getOutputStream(),2048);
-				dis.close();
-				rs.close();
-				stmt.close();
-			}catch(SQLException se){
-				throw new KingleException(jacper.trans("数据库更新错误!"),se);
-			}catch(IOException oe){
-				throw new KingleException(jacper.trans("数据写入错误"),oe);
-			}
-			con.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}    
-	}
+//	@RequestMapping(value="/dictionary/image",method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+//	public void getImage(Jacper jacper) {
+//		try {
+//				
+//			Connection con=jacper.getConnection("shouyu");
+//			HttpServletResponse res = jacper.getResponse();
+//			
+//			String id=jacper.getStr("id");
+//			
+//			String fileName="";
+//			String ContentType="";
+//			try{
+//				Statement stmt = con.createStatement();
+//				String sql0="select image from word_base where id='"+id+"'";
+//				ResultSet rs = stmt.executeQuery(sql0);
+//				rs.next();
+//				ContentType = rs.getString(1);
+//				fileName = rs.getString(2);
+//				InputStream dis = rs.getBinaryStream(3);
+//				try {
+//					fileName=new String(fileName.getBytes("GBK"),"8859_1");
+//				}catch(Exception se){}
+//				res.setContentType(ContentType);
+//				res.setHeader("Content-Disposition","attachment;filename="+fileName);
+//				Files.copyRange(dis,res.getOutputStream(),2048);
+//				dis.close();
+//				rs.close();
+//				stmt.close();
+//			}catch(SQLException se){
+//				throw new KingleException(jacper.trans("数据库更新错误!"),se);
+//			}catch(IOException oe){
+//				throw new KingleException(jacper.trans("数据写入错误"),oe);
+//			}
+//			con.close();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}    
+//	}
 }

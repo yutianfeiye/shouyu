@@ -21,6 +21,8 @@ public class CategoryService {
 		
 		JSONObject treeJSON = new JSONObject();
 		try {
+			
+			//查询所有的树
 			Connection con=jacper.getConnection("shouyu");
 
 			//if(type.equals("category")){
@@ -75,7 +77,7 @@ public class CategoryService {
 		return treeJSON.toString();
 	}
 	
-
+//新建一个分类
 	@RequestMapping(value="/dictionary/postCategory",method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	public String postCategory(Jacper jacper) {
 		String lang=jacper.getString("lang","zh_cn");
